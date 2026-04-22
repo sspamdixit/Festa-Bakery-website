@@ -5,15 +5,15 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
 
-const DELAY_BASE = 2.1;
+const DELAY_BASE = 0.15;
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center pt-20 pb-10 overflow-hidden bg-background">
-      {/* animated ambient gradient orbs */}
+      {/* ambient gradient orbs — CSS animated for GPU performance */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <motion.div
-          className="absolute rounded-full"
+        <div
+          className="festa-orb-1 absolute rounded-full will-change-transform"
           style={{
             width: "60vw",
             height: "60vw",
@@ -22,11 +22,9 @@ export function Hero() {
             background: "radial-gradient(circle, rgba(227,178,60,0.18) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
-          animate={{ scale: [1, 1.15, 1], x: [0, 30, 0], y: [0, -20, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute rounded-full"
+        <div
+          className="festa-orb-2 absolute rounded-full will-change-transform"
           style={{
             width: "50vw",
             height: "50vw",
@@ -35,11 +33,9 @@ export function Hero() {
             background: "radial-gradient(circle, rgba(222,186,192,0.22) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
-          animate={{ scale: [1, 1.2, 1], x: [0, -20, 0], y: [0, 25, 0] }}
-          transition={{ duration: 17, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
-        <motion.div
-          className="absolute rounded-full"
+        <div
+          className="festa-orb-3 absolute rounded-full will-change-transform"
           style={{
             width: "40vw",
             height: "40vw",
@@ -48,8 +44,6 @@ export function Hero() {
             background: "radial-gradient(circle, rgba(69,123,157,0.12) 0%, transparent 70%)",
             filter: "blur(70px)",
           }}
-          animate={{ scale: [1, 1.1, 1], x: [0, 15, 0], y: [0, -15, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 5 }}
         />
       </div>
 

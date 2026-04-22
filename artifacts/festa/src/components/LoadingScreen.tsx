@@ -8,9 +8,9 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
 
   useEffect(() => {
-    const holdTimer = setTimeout(() => setPhase("hold"), 500);
-    const outTimer = setTimeout(() => setPhase("out"), 1300);
-    const doneTimer = setTimeout(() => onDone(), 2000);
+    const holdTimer = setTimeout(() => setPhase("hold"), 1200);
+    const outTimer = setTimeout(() => setPhase("out"), 3200);
+    const doneTimer = setTimeout(() => onDone(), 4000);
     return () => {
       clearTimeout(holdTimer);
       clearTimeout(outTimer);

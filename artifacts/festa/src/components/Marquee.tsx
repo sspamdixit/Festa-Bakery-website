@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const ITEMS = [
   "Fresh",
   "·",
@@ -19,23 +17,15 @@ const ITEMS = [
   "·",
 ];
 
-export function Marquee() {
-  const repeated = [...ITEMS, ...ITEMS, ...ITEMS];
+const repeated = [...ITEMS, ...ITEMS, ...ITEMS];
 
+export function Marquee() {
   return (
     <div
       className="overflow-hidden border-y border-foreground/10 py-4"
       style={{ backgroundColor: "hsl(var(--card))" }}
     >
-      <motion.div
-        className="flex items-center gap-8 whitespace-nowrap"
-        animate={{ x: [0, "-33.333%"] }}
-        transition={{
-          duration: 22,
-          ease: "linear",
-          repeat: Infinity,
-        }}
-      >
+      <div className="festa-marquee-track flex items-center gap-8 whitespace-nowrap will-change-transform">
         {repeated.map((item, i) => (
           <span
             key={i}
@@ -48,7 +38,7 @@ export function Marquee() {
             {item}
           </span>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
