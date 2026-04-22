@@ -147,30 +147,30 @@ export function Hero() {
                 </a>
               </div>
 
-              <div
-                role="img"
-                aria-label="100% pure vegetarian"
-                className="inline-flex items-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5 self-start"
-              >
-                <span className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
-                  <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
-                </span>
-                <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a]">
-                  100% Pure Veg
-                </span>
-              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <div
+                  role="img"
+                  aria-label="100% pure vegetarian"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5"
+                >
+                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
+                    <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
+                  </span>
+                  <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a]">
+                    100% Pure Veg
+                  </span>
+                </div>
 
-              <a
-                href="https://www.google.com/search?q=Festa+home+bakery"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:flex group items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
-              >
-                <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
-                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </span>
-                Bhayli, Vadodara
-              </a>
+                <a
+                  href="https://www.google.com/search?q=Festa+home+bakery"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.03] px-3 py-1.5 text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
+                >
+                  <MapPin className="w-3.5 h-3.5 shrink-0" />
+                  Bhayli, Vadodara
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
