@@ -65,7 +65,7 @@ function Scene() {
       <Sparkles count={30} scale={3.5} size={0.6} speed={0.2} opacity={0.5} color="#E3B23C" />
 
       <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.5}>
-        <group ref={groupRef} scale={0.005}>
+        <group ref={groupRef} scale={0.55}>
           <Suspense fallback={null}>
             <Model />
           </Suspense>
