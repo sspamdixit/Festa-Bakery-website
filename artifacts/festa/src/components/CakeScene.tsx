@@ -47,8 +47,8 @@ function Scene() {
 
   useFrame((state) => {
     if (!groupRef.current) return;
-    // Slow auto-spin baseline.
-    baseYRef.current += 0.003;
+    // Oscillating half-rotation: sweep from -PI/2 to +PI/2 and back.
+    baseYRef.current = Math.sin(state.clock.elapsedTime * 0.4) * (Math.PI / 2);
     // Mouse-driven tilt — small amplitude so neither cake nor shadow ever clip
     // out of the canvas. state.mouse is normalized to [-1, 1] within the canvas.
     const targetX = state.mouse.y * 0.12;
