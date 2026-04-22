@@ -88,11 +88,11 @@
   --sidebar-primary-foreground: 210 40% 14%;
   --sidebar-accent: 351 41% 80%;
   --sidebar-accent-foreground: 210 40% 14%;
-  --sidebar-ring: 348 65% 42%;
+  --sidebar-ring: 336 53% 55%;
   --popover: 12 44% 96%;
   --popover-foreground: 210 40% 14%;
   --popover-border: 350 25% 78%;
-  --primary: 348 65% 42%;
+  --primary: 336 53% 55%;
   --primary-foreground: 12 44% 98%;
   --secondary: 204 38% 44%;
   --secondary-foreground: 12 44% 96%;
@@ -103,8 +103,8 @@
   --destructive: 0 70% 45%;
   --destructive-foreground: 12 44% 96%;
   --input: 350 25% 78%;
-  --ring: 348 65% 42%;
-  --chart-1: 348 65% 42%;
+  --ring: 336 53% 55%;
+  --chart-1: 336 53% 55%;
   --chart-2: 204 38% 44%;
   --chart-3: 351 41% 80%;
   --chart-4: 210 40% 14%;
@@ -187,7 +187,7 @@
   }
   /* Premium text selection */
   ::selection {
-    background-color: rgba(178, 43, 71, 0.35);
+    background-color: rgba(201, 82, 126, 0.35);
     color: hsl(var(--foreground));
   }
   /* Refined scrollbar (WebKit) */
@@ -205,13 +205,13 @@
     background-clip: padding-box;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(178, 43, 71, 0.6);
+    background: rgba(201, 82, 126, 0.6);
     background-clip: padding-box;
     border: 2px solid transparent;
   }
   /* Premium focus ring */
   :focus-visible {
-    outline: 2px solid rgba(178, 43, 71, 0.7);
+    outline: 2px solid rgba(201, 82, 126, 0.7);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -245,7 +245,7 @@
   right: 0;
   bottom: -3px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #B22B47, transparent);
+  background: linear-gradient(90deg, transparent, #C9527E, transparent);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -256,7 +256,7 @@
 
 /* ─── Gradient sheen for headline accent words ────────────────────────── */
 .festa-shine {
-  background: linear-gradient(90deg, #B22B47 0%, #E0617D 35%, #B22B47 70%);
+  background: linear-gradient(90deg, #C9527E 0%, #E0617D 35%, #C9527E 70%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -506,7 +506,7 @@ button.liquid-glass-primary:hover {
     inset 0 -3px 6px rgba(120, 70, 0, 0.25),
     inset 0 -1px 0 rgba(255, 230, 160, 0.6),
     0 2px 4px rgba(0, 0, 0, 0.1),
-    0 18px 32px -10px rgba(178, 43, 71, 0.7),
+    0 18px 32px -10px rgba(201, 82, 126, 0.7),
     0 32px 60px -20px rgba(120, 70, 0, 0.42);
 }
 a.liquid-glass-primary:active,
@@ -555,7 +555,7 @@ button.liquid-glass-primary {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     0 1px 2px rgba(75, 10, 25, 0.18),
-    0 8px 20px -8px rgba(178, 43, 71, 0.45);
+    0 8px 20px -8px rgba(201, 82, 126, 0.45);
 }
 a.liquid-glass::before,  button.liquid-glass::before,
 a.liquid-glass::after,   button.liquid-glass::after,
@@ -576,7 +576,7 @@ button.liquid-glass-primary:hover {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.22),
     0 2px 4px rgba(75, 10, 25, 0.22),
-    0 12px 26px -10px rgba(178, 43, 71, 0.55);
+    0 12px 26px -10px rgba(201, 82, 126, 0.55);
 }
 a.liquid-glass:active,  button.liquid-glass:active,
 a.liquid-glass-soft:active, button.liquid-glass-soft:active {

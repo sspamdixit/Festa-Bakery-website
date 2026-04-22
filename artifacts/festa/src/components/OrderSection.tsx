@@ -8,7 +8,7 @@ export function OrderSection() {
     <section id="order" className="festa-paper py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background" style={{ isolation: "isolate" }}>
       <div
         className="absolute inset-0 opacity-60 pointer-events-none"
-        style={{ background: "radial-gradient(circle at 50% 40%, rgba(178,43,71,0.25) 0%, rgba(222,186,192,0) 60%)" }}
+        style={{ background: "radial-gradient(circle at 50% 40%, rgba(201, 82, 126,0.25) 0%, rgba(222,186,192,0) 60%)" }}
       />
 
       <div className="container px-5 mx-auto max-w-3xl text-center relative z-10">
@@ -28,7 +28,7 @@ export function OrderSection() {
 
           <Dialog>
             <DialogTrigger asChild>
-              <button className="group relative inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center overflow-hidden bg-primary px-8 sm:px-12 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-12px_rgba(178,43,71,0.7)]">
+              <button className="group relative inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center overflow-hidden bg-primary px-8 sm:px-12 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-12px_rgba(201, 82, 126,0.7)]">
                 <span className="relative z-10 flex items-center gap-3 font-sans tracking-wide text-base md:text-lg">
                   <MessageCircle className="w-5 h-5" />
                   Order Cakes on WhatsApp

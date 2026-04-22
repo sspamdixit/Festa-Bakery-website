@@ -17,7 +17,7 @@ export function Hero() {
             height: "60vw",
             top: "-10%",
             left: "-15%",
-            background: "radial-gradient(circle, rgba(178,43,71,0.18) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(201, 82, 126,0.18) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -57,7 +57,7 @@ export function Hero() {
               className="absolute inset-0 -z-10"
               style={{
                 background:
-                  "radial-gradient(circle at 50% 55%, rgba(178,43,71,0.45) 0%, rgba(222,186,192,0.0) 60%)",
+                  "radial-gradient(circle at 50% 55%, rgba(201, 82, 126,0.45) 0%, rgba(222,186,192,0.0) 60%)",
               }}
             />
             <CakeBaked />

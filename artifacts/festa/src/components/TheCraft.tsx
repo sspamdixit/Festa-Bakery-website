@@ -72,7 +72,7 @@ export function TheCraft() {
 
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full z-0 pointer-events-none"
-              style={{ background: "radial-gradient(circle, rgba(178,43,71,0.25) 0%, rgba(178,43,71,0) 60%)", filter: "blur(80px)" }}
+              style={{ background: "radial-gradient(circle, rgba(201, 82, 126,0.25) 0%, rgba(201, 82, 126,0) 60%)", filter: "blur(80px)" }}
             />
           </div>
 

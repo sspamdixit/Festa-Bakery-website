@@ -63,7 +63,7 @@ function Scene() {
       <hemisphereLight args={["#FFF0DC", "#3d2b1f", 1.0]} />
       <directionalLight position={[5, 7, 4]} intensity={1.6} color="#FFF0DC" />
       <directionalLight position={[-5, 2, -3]} intensity={0.6} color="#C4DFFF" />
-      <pointLight position={[-2, 3, -5]} intensity={1.2} color="#B22B47" />
+      <pointLight position={[-2, 3, -5]} intensity={1.2} color="#C9527E" />
 
       <ContactShadows position={[0, -1.4, 0]} opacity={0.22} scale={4} blur={2.4} far={3} color="#3d2b1f" />
 
