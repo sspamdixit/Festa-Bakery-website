@@ -1,6 +1,6 @@
 import { useRef, Suspense, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, useGLTF, Center, ContactShadows, Sparkles } from "@react-three/drei";
+import { useGLTF, Center, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 
 function detectWebGL(): boolean {
@@ -23,13 +23,29 @@ function Model() {
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh && child.material) {
         const mats = Array.isArray(child.material) ? child.material : [child.material];
-        mats.forEach((m) => {
+        const upgraded = mats.map((m) => {
+          // Convert flat unlit materials to lit standard materials so the cake
+          // catches highlights and shadows instead of looking like a sticker.
+          const mAny = m as THREE.MeshStandardMaterial & { map?: THREE.Texture; color?: THREE.Color };
           if (m instanceof THREE.MeshStandardMaterial) {
-            m.envMapIntensity = 1.4;
-            m.roughness = Math.max(0.1, m.roughness * 0.7);
+            m.roughness = 0.7;
+            m.metalness = 0.0;
+            m.envMapIntensity = 1.0;
             m.needsUpdate = true;
+            return m;
           }
+          const lit = new THREE.MeshStandardMaterial({
+            map: mAny.map ?? null,
+            color: mAny.color ? mAny.color.clone() : new THREE.Color("#ffffff"),
+            roughness: 0.75,
+            metalness: 0.0,
+          });
+          lit.side = THREE.DoubleSide;
+          return lit;
         });
+        child.material = upgraded.length === 1 ? upgraded[0] : upgraded;
+        child.castShadow = false;
+        child.receiveShadow = false;
       }
     });
   }, [scene]);
@@ -41,36 +57,31 @@ function Model() {
 function Scene() {
   const groupRef = useRef<THREE.Group>(null);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!groupRef.current) return;
-    groupRef.current.rotation.y += 0.004;
-    const tx = state.mouse.y * 0.25;
-    const tz = state.mouse.x * 0.25;
-    groupRef.current.rotation.x += 0.05 * (tx - groupRef.current.rotation.x);
-    groupRef.current.rotation.z += 0.05 * (tz - groupRef.current.rotation.z);
+    // Gentle, predictable spin only — no mouse-driven tilt that pushes the
+    // cake out of the canvas frame.
+    groupRef.current.rotation.y += 0.003;
   });
 
   return (
     <>
       {/* Cheap sky + ground hemisphere — no HDR download */}
-      <hemisphereLight args={["#FFF0DC", "#3d2b1f", 1.2]} />
+      <hemisphereLight args={["#FFF0DC", "#3d2b1f", 1.0]} />
       {/* Warm key from upper-right */}
-      <directionalLight position={[6, 9, 5]}  intensity={2.4} color="#FFF0DC" />
+      <directionalLight position={[5, 7, 4]}  intensity={1.6} color="#FFF0DC" />
       {/* Cool fill from left */}
-      <directionalLight position={[-6, 2, -4]} intensity={0.8} color="#C4DFFF" />
+      <directionalLight position={[-5, 2, -3]} intensity={0.6} color="#C4DFFF" />
       {/* Golden rim from behind */}
-      <pointLight       position={[-2, 3, -5]} intensity={1.8} color="#E3B23C" />
+      <pointLight       position={[-2, 3, -5]} intensity={1.2} color="#E3B23C" />
 
-      <ContactShadows position={[0, -1.55, 0]} opacity={0.25} scale={5} blur={2.5} far={4} color="#3d2b1f" />
-      <Sparkles count={30} scale={3.5} size={0.6} speed={0.2} opacity={0.5} color="#E3B23C" />
+      <ContactShadows position={[0, -1.4, 0]} opacity={0.22} scale={4} blur={2.4} far={3} color="#3d2b1f" />
 
-      <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.5}>
-        <group ref={groupRef} scale={0.55}>
-          <Suspense fallback={null}>
-            <Model />
-          </Suspense>
-        </group>
-      </Float>
+      <group ref={groupRef} scale={0.42}>
+        <Suspense fallback={null}>
+          <Model />
+        </Suspense>
+      </group>
     </>
   );
 }
