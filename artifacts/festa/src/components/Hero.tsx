@@ -48,7 +48,7 @@ export function Hero() {
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-2 col-span-4 lg:col-span-5 relative h-[160px] sm:h-[240px] md:h-[340px] lg:h-[640px] w-full"
+            className="order-2 col-span-3 lg:col-span-5 relative h-[160px] sm:h-[240px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,7 +63,7 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-1 col-span-8 lg:col-span-7">
+          <div className="order-1 col-span-9 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function Hero() {
               <h2 className="hidden sm:block text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
                 Boutique Bakery · Vadodara
               </h2>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <motion.span
                   className="inline-block"
                   initial={{ opacity: 0, y: 30 }}
@@ -126,8 +126,8 @@ export function Hero() {
               <div className="flex flex-row gap-3">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="group relative inline-flex h-12 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden bg-primary px-6 sm:px-8 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] hover:-translate-y-0.5">
-                      <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-sm sm:text-base">
+                    <button className="group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden bg-primary px-7 sm:px-8 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] hover:-translate-y-0.5">
+                      <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base sm:text-base">
                         Order Now
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
@@ -139,7 +139,7 @@ export function Hero() {
 
                 <a
                   href="#menu"
-                  className="inline-flex h-12 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-6 sm:px-8 rounded-full border-2 border-foreground/25 font-sans font-bold text-sm sm:text-base text-foreground transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-0.5"
+                  className="inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-7 sm:px-8 rounded-full border-2 border-foreground/25 font-sans font-bold text-base sm:text-base text-foreground transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-0.5"
                 >
                   View Menu
                 </a>
