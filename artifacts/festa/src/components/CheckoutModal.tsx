@@ -13,7 +13,10 @@ export function CheckoutModal() {
   const [phone, setPhone] = useState("");
   const [details, setDetails] = useState("");
 
-  const canSubmit = name.trim() && phone.trim() && details.trim();
+  const phoneDigits = phone.replace(/\D/g, "");
+  const isPhoneValid = phoneDigits.length >= 10 && phoneDigits.length <= 15;
+  const showPhoneError = phone.trim().length > 0 && !isPhoneValid;
+  const canSubmit = Boolean(name.trim() && isPhoneValid && details.trim());
 
   const handleContinue = () => {
     if (!canSubmit) return;
@@ -48,11 +51,20 @@ export function CheckoutModal() {
           <Input
             id="phone"
             type="tel"
+            inputMode="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="+91 98765 43210"
-            className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4"
+            aria-invalid={showPhoneError}
+            className={`h-12 rounded-xl border-foreground/15 bg-card/40 px-4 ${
+              showPhoneError ? "border-destructive focus-visible:ring-destructive" : ""
+            }`}
           />
+          {showPhoneError && (
+            <p className="text-xs font-medium text-destructive">
+              Please enter a valid phone number (10–15 digits).
+            </p>
+          )}
         </div>
         <div className="grid gap-2">
           <Label htmlFor="details" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
