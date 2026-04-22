@@ -2,28 +2,28 @@ import { motion } from "framer-motion";
 
 const menuItems = [
   {
-    category: "Celebration Cakes",
+    category: "Eggless Celebration Cakes",
     items: [
-      { name: "Chocolate Truffle", desc: "Rich Belgian chocolate sponge, dark ganache, crackling chocolate shards.", price: "₹1,200 / kg" },
-      { name: "Rasmalai Pista Cake", desc: "Saffron-soaked malai sponge, cardamom cream, slivered pistachios.", price: "₹1,650 / kg" },
-      { name: "Red Velvet Rosette", desc: "Cocoa red velvet, cream cheese frosting, hand-piped buttercream rosettes.", price: "₹1,400 / kg" },
-      { name: "Tiramisu Celebration", desc: "Espresso-soaked sponge, mascarpone cream, dusted dark cocoa.", price: "₹1,550 / kg" },
+      { name: "Chocolate Truffle", desc: "Eggless Belgian chocolate sponge, dark ganache, and crisp chocolate shards for birthdays and celebrations.", price: "₹1,200 / kg" },
+      { name: "Rasmalai Pista Cake", desc: "Eggless saffron sponge with cardamom cream, rasmalai flavour, and slivered pistachios.", price: "₹1,650 / kg" },
+      { name: "Red Velvet Rosette", desc: "Eggless red velvet layers, cream cheese frosting, and hand-piped buttercream rosettes.", price: "₹1,400 / kg" },
+      { name: "Tiramisu Celebration", desc: "Eggless espresso sponge, mascarpone cream, and a cocoa finish inspired by classic tiramisu.", price: "₹1,550 / kg" },
     ],
   },
   {
-    category: "Everyday Bakes",
+    category: "Eggless Everyday Bakes",
     items: [
-      { name: "Banana Walnut Loaf", desc: "Slow-ripened bananas, toasted walnuts, brown sugar crust.", price: "₹450" },
-      { name: "Brookies (Box of 6)", desc: "Half brownie, half cookie. Fudgy, gooey, gone in minutes.", price: "₹380" },
-      { name: "Cinnamon Rolls (4)", desc: "Soft enriched dough, cinnamon sugar swirl, cream cheese glaze.", price: "₹420" },
-      { name: "Whole Wheat Sourdough", desc: "48-hour cold ferment, crackling crust, open honeycomb crumb.", price: "₹320" },
+      { name: "Banana Walnut Loaf", desc: "Moist eggless banana loaf with toasted walnuts and a light brown sugar crust.", price: "₹450" },
+      { name: "Brookies (Box of 6)", desc: "Eggless brownie-cookie bars that are fudgy, gooey, and perfect for gifting.", price: "₹380" },
+      { name: "Cinnamon Rolls (4)", desc: "Soft eggless rolls with cinnamon sugar swirl and cream cheese glaze.", price: "₹420" },
+      { name: "Whole Wheat Sourdough", desc: "48-hour cold ferment, crackling crust, and a naturally airy crumb.", price: "₹320" },
     ],
   },
   {
-    category: "Custom Orders",
+    category: "Custom Eggless Orders",
     items: [
-      { name: "Designer Theme Cakes", desc: "Birthdays, anniversaries, baby showers. Tell us the story, we'll bake it.", price: "From ₹2,200 / kg" },
-      { name: "Eggless Available", desc: "Most cakes available eggless on request, with no compromise on texture.", price: "Same pricing" },
+      { name: "Designer Theme Cakes", desc: "Custom eggless cakes for birthdays, anniversaries, baby showers, and corporate gifting.", price: "From ₹2,200 / kg" },
+      { name: "Eggless Customisation", desc: "Most cakes can be customised eggless without compromising texture or flavour.", price: "Always Available" },
     ],
   },
 ];
@@ -39,8 +39,8 @@ export function Specialties() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Menu</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">What we bake.</h3>
+          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Our Menu</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Eggless bakes made fresh.</h3>
         </motion.div>
 
         <div className="space-y-12 md:space-y-20">

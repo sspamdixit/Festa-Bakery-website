@@ -9,7 +9,6 @@ const DELAY_BASE = 0.15;
 export function Hero() {
   return (
     <section className="relative pt-20 pb-12 overflow-hidden bg-background lg:min-h-[100dvh] lg:flex lg:items-center">
-      {/* ambient gradient orbs — CSS animated for GPU performance */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div
           className="festa-orb-1 absolute rounded-full will-change-transform"
@@ -48,8 +47,6 @@ export function Hero() {
 
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-10 items-center">
-
-          {/* 3D Cake — first on mobile, right column on desktop */}
           <motion.div
             className="order-1 lg:order-2 lg:col-span-5 relative h-[220px] sm:h-[300px] md:h-[420px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
@@ -66,7 +63,6 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          {/* Text + CTAs — second on mobile, left column on desktop */}
           <div className="order-2 lg:order-1 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -74,7 +70,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: DELAY_BASE, ease: [0.16, 1, 0.3, 1] }}
             >
               <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
-                Home Bakery · India
+                Eggless Home Bakery · India
               </h2>
               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <motion.span
@@ -83,7 +79,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: DELAY_BASE + 0.05, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Festa:
+                  Eggless
                 </motion.span>{" "}
                 <motion.span
                   className="inline-block text-secondary"
@@ -91,7 +87,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: DELAY_BASE + 0.12, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Artisanal
+                  Cakes
                 </motion.span>
                 <br />
                 <motion.span
@@ -100,7 +96,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: DELAY_BASE + 0.19, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Baking,
+                  Baked
                 </motion.span>{" "}
                 <motion.span
                   className="inline-block italic font-extrabold"
@@ -109,7 +105,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: DELAY_BASE + 0.26, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Redefined.
+                  Fresh.
                 </motion.span>
               </h1>
               <motion.p
@@ -118,7 +114,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
               >
-                Celebration cakes and everyday bakes, made fresh from our home kitchen. Obsessive consistency, real ingredients, signed before they leave.
+                Festa is a boutique eggless home bakery in India, making custom celebration cakes, everyday bakes, and premium desserts with real ingredients and careful finishing.
               </motion.p>
             </motion.div>
 
@@ -128,7 +124,6 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: DELAY_BASE + 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
-              {/* Primary CTAs — always side-by-side */}
               <div className="flex flex-row gap-3">
                 <Dialog>
                   <DialogTrigger asChild>
@@ -151,9 +146,8 @@ export function Hero() {
                 </a>
               </div>
 
-              {/* Secondary trust link — compact on mobile */}
               <a
-                href="https://www.google.com/search?q=Festa+home+bakery"
+                href="https://www.google.com/search?q=Festa+home+bakery+eggless"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
@@ -161,15 +155,13 @@ export function Hero() {
                 <span className="w-7 h-7 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
                 </span>
-                Google Business Profile
+                Eggless Home Bakery in India
               </a>
             </motion.div>
           </div>
-
         </div>
       </div>
 
-      {/* bottom gradient bleed into next section */}
       <div
         className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
         style={{

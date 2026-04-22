@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LETTERS = "Festa.".split("");
-const TAGLINE = "Artisanal Baking, Redefined.";
+const TAGLINE = "Eggless Baking, Freshly Made.";
 
 export function LoadingScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
@@ -28,7 +28,6 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
           exit={{ y: "-100%" }}
           transition={{ duration: 0.85, ease: [0.76, 0, 0.24, 1] }}
         >
-          {/* ambient glow */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -37,7 +36,6 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
             }}
           />
 
-          {/* brand name */}
           <div className="flex items-end gap-[0.02em] overflow-hidden mb-6 relative z-10">
             {LETTERS.map((char, i) => (
               <motion.span
@@ -46,18 +44,13 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
                 style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)" }}
                 initial={{ opacity: 0, y: 60, rotateX: -40 }}
                 animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: i * 0.08,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               >
                 {char}
               </motion.span>
             ))}
           </div>
 
-          {/* progress bar */}
           <div className="relative z-10 w-32 h-[2px] bg-foreground/10 rounded-full overflow-hidden mb-6">
             <motion.div
               className="absolute inset-y-0 left-0 rounded-full"
@@ -68,7 +61,6 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
             />
           </div>
 
-          {/* tagline */}
           <motion.p
             className="relative z-10 text-xs font-sans font-semibold tracking-[0.3em] text-foreground/50 uppercase"
             initial={{ opacity: 0 }}

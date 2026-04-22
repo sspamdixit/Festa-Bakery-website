@@ -17,14 +17,14 @@ export function TheCraft() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/celebration-cake.png"
-                    alt="Two-tier celebration cake with gold leaf"
+                    alt="Eggless celebration cake with gold leaf"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/everyday-bake.png"
-                    alt="Everyday bakes — tea cake, milk buns, cookies"
+                    alt="Eggless everyday bakes like tea cake, milk buns, and cookies"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -40,14 +40,14 @@ export function TheCraft() {
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/chocolate-truffle.png"
-                    alt="Chocolate truffle cake slice"
+                    alt="Eggless chocolate truffle cake slice"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/baker-hands.png"
-                    alt="Baker piping buttercream rosettes"
+                    alt="Baker piping buttercream rosettes on an eggless cake"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -69,23 +69,22 @@ export function TheCraft() {
           >
             <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Craft</h2>
             <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[0.95] text-foreground mb-6 md:mb-8">
-              Every bake, signed before it leaves.
+              Eggless baking, done with precision.
             </h3>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                Festa runs out of a home kitchen, not a factory. That means small, deliberate batches — and the same hands measuring, mixing, baking, and finishing every single order.
+                Festa is an eggless home bakery in India, making small-batch cakes and fresh bakes with consistent texture, clean flavour, and careful finishing.
               </p>
               <p>
-                We use real butter, real cream, real chocolate. No premixes. No shortcuts. If a cake doesn't taste like it should, it doesn't leave the kitchen — we bake it again.
+                We use real butter, real cream, and real chocolate. No premixes. No shortcuts. Every order is baked fresh, packed with care, and finished to feel premium.
               </p>
               <p>
-                Whether it's a Tuesday banana loaf or your daughter's first birthday cake, the standard is the same: consistent, considered, and made for you.
+                From birthday cakes and anniversary cakes to tea-time bakes and gifting boxes, each recipe is built for flavour, softness, and dependable eggless results.
               </p>
             </div>
           </motion.div>
         </div>
       </div>
-      {/* bottom gradient bleed */}
       <div
         className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
         style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }}
