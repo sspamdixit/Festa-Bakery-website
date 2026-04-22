@@ -108,7 +108,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: DELAY_BASE + 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="hidden sm:flex flex-col sm:flex-row gap-3 justify-center">
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="liquid-glass-primary group relative inline-flex h-12 sm:h-14 w-full sm:w-auto items-center justify-center overflow-hidden whitespace-nowrap px-4 sm:px-8 font-bold rounded-full">
