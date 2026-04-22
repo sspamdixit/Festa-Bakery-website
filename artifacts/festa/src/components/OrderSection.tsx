@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function OrderSection() {
   return (
-    <section id="order" className="py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background" style={{ isolation: "isolate" }}>
+    <section id="order" className="festa-paper py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background" style={{ isolation: "isolate" }}>
       <div
         className="absolute inset-0 opacity-60 pointer-events-none"
         style={{ background: "radial-gradient(circle at 50% 40%, rgba(227,178,60,0.25) 0%, rgba(222,186,192,0) 60%)" }}

@@ -301,6 +301,29 @@
 .festa-cake-float { animation: cake-float 4.5s ease-in-out infinite; }
 .festa-spark      { animation: spark-pulse var(--dur, 2.5s) ease-in-out infinite; }
 
+/* ─── Paper grain texture for sections ──────────────────────────────────
+   Subtle, transparent grainy paper feel layered behind section content.
+   Pure CSS noise via SVG data-uri — no extra requests, GPU-cheap.
+─────────────────────────────────────────────────────────────────────── */
+.festa-paper {
+  position: relative;
+}
+.festa-paper > * {
+  position: relative;
+  z-index: 1;
+}
+.festa-paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.085;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='2' stitchTiles='stitch' seed='4'/><feColorMatrix values='0 0 0 0 0.18  0 0 0 0 0.12  0 0 0 0 0.08  0 0 0 0.85 0'/></filter><rect width='100%25' height='100%25' filter='url(%23p)'/></svg>");
+  background-size: 220px 220px;
+}
+
 /* ─── Liquid Glass surfaces ─────────────────────────────────────────────
    A reusable, GPU-friendly frosted-glass treatment. We keep the blur
    modest (10–14px), promote the layer with translateZ(0), and avoid

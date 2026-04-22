@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function TheCraft() {
   return (
-    <section className="py-16 md:py-28 lg:py-36 overflow-hidden relative" style={{ backgroundColor: "hsl(var(--card))" }}>
+    <section className="festa-paper py-16 md:py-28 lg:py-36 overflow-hidden relative" style={{ backgroundColor: "hsl(var(--card))" }}>
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">

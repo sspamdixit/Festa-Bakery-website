@@ -30,7 +30,7 @@ const menuItems = [
 
 export function Specialties() {
   return (
-    <section id="menu" className="py-16 md:py-28 lg:py-36 bg-background">
+    <section id="menu" className="festa-paper py-16 md:py-28 lg:py-36 bg-background">
       <div className="container px-5 mx-auto max-w-5xl">
         <motion.div
           className="text-center mb-10 md:mb-20"
