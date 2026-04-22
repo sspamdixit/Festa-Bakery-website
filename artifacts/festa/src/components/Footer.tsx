@@ -1,6 +1,6 @@
 import { Instagram, MapPin, MessageCircle, Phone, Mail } from "lucide-react";
 
-const WHATSAPP_NUMBER = "919999999999"; // TODO: replace with real Festa WhatsApp number
+const WHATSAPP_NUMBER = "919963163227";
 
 export function Footer() {
   return (
@@ -18,18 +18,18 @@ export function Footer() {
             <h3 className="text-xs font-sans font-bold tracking-[0.25em] text-secondary uppercase mb-6">Reach Us</h3>
             <ul className="space-y-4 text-sm font-sans font-medium text-foreground/80">
               <li>
-                <a href="mailto:hello@festa.bakery" className="flex items-center gap-2 hover:text-secondary transition-colors">
-                  <Mail className="w-4 h-4" /> hello@festa.bakery
+                <a href="mailto:placeholder@mail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                  <Mail className="w-4 h-4" /> placeholder@mail.com
                 </a>
               </li>
               <li>
                 <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 hover:text-secondary transition-colors">
-                  <Phone className="w-4 h-4" /> +91 99999 99999
+                  <Phone className="w-4 h-4" /> +91 99631 63227
                 </a>
               </li>
               <li className="flex items-start gap-2 pt-1">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Home Bakery<br />India</span>
+                <span>Home Bakery<br />Vadodara, Gujarat</span>
               </li>
             </ul>
           </div>
@@ -38,8 +38,8 @@ export function Footer() {
             <h3 className="text-xs font-sans font-bold tracking-[0.25em] text-secondary uppercase mb-6">Follow</h3>
             <ul className="space-y-4 text-sm font-sans font-medium text-foreground/80">
               <li>
-                <a href="https://instagram.com/festa.bakery" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-secondary transition-colors">
-                  <Instagram className="w-4 h-4" /> Instagram
+                <a href="https://instagram.com/festa.bakes" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                  <Instagram className="w-4 h-4" /> @festa.bakes
                 </a>
               </li>
               <li>

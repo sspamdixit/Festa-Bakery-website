@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "919999999999"; // TODO: replace with real Festa number (country code + number, no +)
+const WHATSAPP_NUMBER = "919963163227";
 
 export function CheckoutModal() {
   const [name, setName] = useState("");
