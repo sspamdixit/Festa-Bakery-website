@@ -128,8 +128,8 @@ export function Hero() {
               <div className="flex flex-row gap-3">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="liquid-glass-primary group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden px-7 sm:px-8 font-bold rounded-full">
-                      <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base sm:text-base">
+                    <button className="liquid-glass-primary group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden whitespace-nowrap px-7 sm:px-8 font-bold rounded-full">
+                      <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base sm:text-base whitespace-nowrap">
                         Order Now
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
