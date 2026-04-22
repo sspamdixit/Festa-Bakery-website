@@ -1,36 +1,21 @@
-import { useRef, useState, Suspense, useEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Float, useGLTF, Center, Environment, ContactShadows } from "@react-three/drei";
+import { useRef, Suspense, useEffect, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Float, useGLTF, Center, ContactShadows, Sparkles } from "@react-three/drei";
 import * as THREE from "three";
+
+function detectWebGL(): boolean {
+  try {
+    const c = document.createElement("canvas");
+    return !!(c.getContext("webgl2") || c.getContext("webgl"));
+  } catch {
+    return false;
+  }
+}
 
 const MODEL_URL = `${import.meta.env.BASE_URL}models/scene.gltf`;
 useGLTF.preload(MODEL_URL);
 
-// ─── Bake trigger ────────────────────────────────────────────────────────────
-function BakeTrigger({ onBaked }: { onBaked: (url: string) => void }) {
-  const { gl } = useThree();
-  const frame = useRef(0);
-  const done = useRef(false);
-
-  useFrame(() => {
-    if (done.current) return;
-    frame.current++;
-    // Wait ~90 frames (≈1.5 s at 60 fps) for lights + model to settle
-    if (frame.current < 90) return;
-    done.current = true;
-
-    // Preserve drawing buffer for one extra frame so toDataURL works
-    requestAnimationFrame(() => {
-      const url = gl.domElement.toDataURL("image/png");
-      // Sanity-check: an empty canvas produces a tiny data URL (~100 bytes)
-      if (url.length > 5000) onBaked(url);
-    });
-  });
-
-  return null;
-}
-
-// ─── Live 3-D model (used only during the bake window) ───────────────────────
+// ─── Model ────────────────────────────────────────────────────────────────────
 function Model() {
   const { scene } = useGLTF(MODEL_URL);
 
@@ -38,25 +23,22 @@ function Model() {
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh && child.material) {
         const mats = Array.isArray(child.material) ? child.material : [child.material];
-        mats.forEach((mat) => {
-          if (mat instanceof THREE.MeshStandardMaterial) {
-            mat.envMapIntensity = 2.2;
-            mat.roughness = Math.max(0.08, mat.roughness * 0.65);
-            mat.needsUpdate = true;
+        mats.forEach((m) => {
+          if (m instanceof THREE.MeshStandardMaterial) {
+            m.envMapIntensity = 1.4;
+            m.roughness = Math.max(0.1, m.roughness * 0.7);
+            m.needsUpdate = true;
           }
         });
       }
     });
   }, [scene]);
 
-  return (
-    <Center>
-      <primitive object={scene} />
-    </Center>
-  );
+  return <Center><primitive object={scene} /></Center>;
 }
 
-function LiveScene({ onBaked }: { onBaked: (url: string) => void }) {
+// ─── Scene contents ───────────────────────────────────────────────────────────
+function Scene() {
   const groupRef = useRef<THREE.Group>(null);
 
   useFrame((state) => {
@@ -70,8 +52,18 @@ function LiveScene({ onBaked }: { onBaked: (url: string) => void }) {
 
   return (
     <>
-      <Environment preset="city" />
-      <ContactShadows position={[0, -1.55, 0]} opacity={0.3} scale={5} blur={3} far={4} color="#3d2b1f" />
+      {/* Cheap sky + ground hemisphere — no HDR download */}
+      <hemisphereLight args={["#FFF0DC", "#3d2b1f", 1.2]} />
+      {/* Warm key from upper-right */}
+      <directionalLight position={[6, 9, 5]}  intensity={2.4} color="#FFF0DC" />
+      {/* Cool fill from left */}
+      <directionalLight position={[-6, 2, -4]} intensity={0.8} color="#C4DFFF" />
+      {/* Golden rim from behind */}
+      <pointLight       position={[-2, 3, -5]} intensity={1.8} color="#E3B23C" />
+
+      <ContactShadows position={[0, -1.55, 0]} opacity={0.25} scale={5} blur={2.5} far={4} color="#3d2b1f" />
+      <Sparkles count={30} scale={3.5} size={0.6} speed={0.2} opacity={0.5} color="#E3B23C" />
+
       <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.5}>
         <group ref={groupRef} scale={0.85}>
           <Suspense fallback={null}>
@@ -79,133 +71,77 @@ function LiveScene({ onBaked }: { onBaked: (url: string) => void }) {
           </Suspense>
         </group>
       </Float>
-      <BakeTrigger onBaked={onBaked} />
     </>
   );
 }
 
-// ─── Baked poster — zero WebGL, pure CSS ─────────────────────────────────────
-const SPARKS = Array.from({ length: 14 }, (_, i) => ({
+// ─── WebGL-unavailable fallback — CSS only, on-brand ─────────────────────────
+const SPARKS = Array.from({ length: 12 }, (_, i) => ({
   id: i,
-  top:  `${12 + ((i * 37 + 11) % 76)}%`,
-  left: `${8  + ((i * 53 + 7)  % 84)}%`,
-  size: `${3  + (i % 4)}px`,
-  delay:    `${(i * 0.35) % 3}s`,
-  duration: `${2.2 + (i % 3) * 0.6}s`,
+  top:      `${15 + ((i * 41 + 7) % 70)}%`,
+  left:     `${10 + ((i * 57 + 3) % 80)}%`,
+  size:     `${3  +  (i % 4)}px`,
+  delay:    `${(i * 0.3) % 3}s`,
+  duration: `${2.2 + (i % 3) * 0.7}s`,
 }));
 
-function BakedPoster({ src }: { src: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    let raf = 0;
-    let tx = 0, ty = 0;
-
-    const onMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      tx = ((e.clientX - rect.left - rect.width  / 2) / (rect.width  / 2)) * 10;
-      ty = ((e.clientY - rect.top  - rect.height / 2) / (rect.height / 2)) * 7;
-    };
-
-    const tick = () => {
-      if (el) {
-        el.style.transform =
-          `perspective(900px) rotateY(${tx}deg) rotateX(${-ty}deg)`;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-
-    const onLeave = () => { tx = 0; ty = 0; };
-
-    window.addEventListener("mousemove", onMove);
-    el.addEventListener("mouseleave", onLeave);
-    raf = requestAnimationFrame(tick);
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      el.removeEventListener("mouseleave", onLeave);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-
+function Fallback() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-      {/* golden sparkle particles — CSS only */}
-      {SPARKS.map((s) => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="relative festa-cake-float">
+        {SPARKS.map((s) => (
+          <div
+            key={s.id}
+            className="festa-spark absolute rounded-full pointer-events-none"
+            style={{
+              top: s.top, left: s.left,
+              width: s.size, height: s.size,
+              background: "#E3B23C",
+              animationDelay: s.delay,
+              animationDuration: s.duration,
+            }}
+          />
+        ))}
         <div
-          key={s.id}
-          className="festa-spark absolute rounded-full pointer-events-none"
+          className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full flex items-center justify-center"
           style={{
-            top: s.top,
-            left: s.left,
-            width: s.size,
-            height: s.size,
-            background: "#E3B23C",
-            animationDelay: s.delay,
-            animationDuration: s.duration,
+            background:
+              "radial-gradient(circle, rgba(227,178,60,0.35) 0%, rgba(227,178,60,0.08) 55%, transparent 80%)",
+            boxShadow: "0 0 80px 20px rgba(227,178,60,0.12)",
           }}
-        />
-      ))}
-
-      {/* ambient glow behind the cake */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 55%, rgba(227,178,60,0.35) 0%, transparent 65%)",
-        }}
-      />
-
-      {/* the baked image with float + tilt */}
-      <div
-        ref={containerRef}
-        className="relative will-change-transform"
-        style={{ transition: "transform 0.08s linear" }}
-      >
-        <img
-          src={src}
-          alt="Handcrafted celebration cake"
-          className="festa-cake-float w-full max-w-xs md:max-w-sm lg:max-w-md object-contain select-none"
-          draggable={false}
-          style={{
-            filter:
-              "drop-shadow(0 0 48px rgba(227,178,60,0.45)) drop-shadow(0 24px 48px rgba(40,20,5,0.3))",
-          }}
-        />
+        >
+          <span
+            className="font-serif font-black text-foreground/25 select-none"
+            style={{ fontSize: "clamp(4rem, 12vw, 7rem)" }}
+          >
+            F
+          </span>
+        </div>
       </div>
     </div>
   );
 }
 
-// ─── Orchestrator ─────────────────────────────────────────────────────────────
+// ─── Export ───────────────────────────────────────────────────────────────────
 export function CakeBaked() {
-  const [baked, setBaked] = useState<string | null>(null);
+  // Check upfront so we never try to create a WebGL context on unsupported devices.
+  // useState initializer runs once on first render — no effect needed.
+  const [hasWebGL] = useState(() => detectWebGL());
 
-  // If baked, no Canvas in DOM at all
-  if (baked) return <BakedPoster src={baked} />;
+  if (!hasWebGL) return <Fallback />;
 
   return (
     <Canvas
       camera={{ position: [3.2, 1.4, 4.2], fov: 38 }}
-      dpr={[1, 2]}
-      gl={{ antialias: true, alpha: true, preserveDrawingBuffer: true }}
+      dpr={[1, 1.5]}
+      performance={{ min: 0.5 }}
+      gl={{ antialias: true, alpha: true }}
       onCreated={({ gl }) => {
         gl.toneMapping = 4; // ACESFilmicToneMapping
-        gl.toneMappingExposure = 1.25;
-        gl.domElement.addEventListener("webglcontextlost", (e) => {
-          e.preventDefault();
-          // WebGL unavailable — fall back to product photo
-          setBaked(`${import.meta.env.BASE_URL}images/celebration-cake.png`);
-        });
+        gl.toneMappingExposure = 1.2;
       }}
     >
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[6, 9, 5]}  intensity={2.8} color="#FFF0DC" />
-      <directionalLight position={[-6, 2, -4]} intensity={0.9} color="#C4DFFF" />
-      <pointLight      position={[-2, 3, -5]}  intensity={2.2} color="#E3B23C" />
-      <LiveScene onBaked={setBaked} />
+      <Scene />
     </Canvas>
   );
 }
