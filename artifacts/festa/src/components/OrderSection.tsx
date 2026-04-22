@@ -1,6 +1,6 @@
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function OrderSection() {
@@ -39,6 +39,16 @@ export function OrderSection() {
             </DialogTrigger>
             <CheckoutModal />
           </Dialog>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Bhayli%2C+Vadodara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 md:mt-10 inline-flex items-center gap-2 text-sm md:text-base font-sans font-semibold text-foreground/75 hover:text-secondary transition-colors"
+          >
+            <MapPin className="w-4 h-4 shrink-0" />
+            <span>Pickup address: Bhayli, Vadodara — Gujarat 391410</span>
+          </a>
         </motion.div>
       </div>
       <div

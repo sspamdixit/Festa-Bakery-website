@@ -27,9 +27,21 @@ export function Footer() {
                   <Phone className="w-4 h-4 shrink-0" /> +91 99631 63227
                 </a>
               </li>
-              <li className="flex items-start gap-2 pt-1">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Home Bakery<br />Bhayli, Vadodara<br /><span className="text-foreground/60">Serving all of Vadodara</span></span>
+              <li className="pt-1">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Bhayli%2C+Vadodara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 hover:text-secondary transition-colors"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>
+                    Festa Home Bakery<br />
+                    Bhayli, Vadodara<br />
+                    Gujarat 391410, India<br />
+                    <span className="text-foreground/60">Serving all of Vadodara</span>
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
