@@ -134,6 +134,10 @@ export function Specialties() {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-10 md:mt-14 text-center text-xs sm:text-sm font-sans font-medium text-muted-foreground">
+          Customised cakes (themes, toppers, fondant work) are charged extra. Final pricing is confirmed on WhatsApp.
+        </p>
       </div>
     </section>
   );
