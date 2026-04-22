@@ -1,5 +1,4 @@
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
@@ -8,16 +7,8 @@ import { CakeBaked } from "./CakeBaked";
 const DELAY_BASE = 0.15;
 
 export function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  const cakeX = useTransform(scrollYProgress, [0, 1], ["30%", "-50%"]);
-  const cakeTransform = useMotionTemplate`translate(${cakeX}, -50%)`;
-
   return (
-    <section ref={sectionRef} className="festa-paper relative pt-20 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-transparent lg:min-h-[100dvh] lg:flex lg:items-center">
+    <section className="festa-paper relative pt-20 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-transparent lg:min-h-[100dvh] lg:flex lg:items-center">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div
           className="festa-orb-1 absolute rounded-full will-change-transform"
@@ -59,12 +50,12 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 z-0 overflow-visible"
         style={{ opacity: 0.18 }}
       >
-        <motion.div
+        <div
           className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin]"
-          style={{ transform: cakeTransform }}
+          style={{ transform: "translate(-80%, -50%)" }}
         >
           <CakeBaked />
-        </motion.div>
+        </div>
       </div>
 
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full text-center">
