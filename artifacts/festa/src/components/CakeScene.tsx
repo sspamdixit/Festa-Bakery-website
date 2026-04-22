@@ -79,7 +79,7 @@ function Scene() {
 export default function CakeScene() {
   return (
     <Canvas
-      camera={{ position: [0, 5.2, 3.6], fov: 44 }}
+      camera={{ position: [0, 6.6, 2.4], fov: 44 }}
       dpr={[1, 1.5]}
       performance={{ min: 0.5 }}
       gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
