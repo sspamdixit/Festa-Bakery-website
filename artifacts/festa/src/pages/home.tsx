@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <LoadingScreen onDone={handleDone} />
       <main
-        className="w-full bg-background min-h-screen"
+        className="festa-grain w-full bg-background min-h-screen"
         style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
       >
         <NavBar />

@@ -99,8 +99,7 @@ export function Hero() {
                   Baked
                 </motion.span>{" "}
                 <motion.span
-                  className="inline-block italic font-extrabold"
-                  style={{ color: "#E3B23C" }}
+                  className="festa-shine inline-block italic font-extrabold"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: DELAY_BASE + 0.26, ease: [0.16, 1, 0.3, 1] }}
