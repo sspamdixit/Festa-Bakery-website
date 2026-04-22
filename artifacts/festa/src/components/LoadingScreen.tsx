@@ -6,44 +6,36 @@ const TAGLINE = "Baked Fresh, Every Time.";
 
 const BASE = import.meta.env.BASE_URL;
 
-// Assets to warm in the browser cache while the loader is on screen.
-const PRELOAD_IMAGES = [
-  `${BASE}images/celebration-cake.png`,
-  `${BASE}images/everyday-bake.png`,
-  `${BASE}images/chocolate-truffle.png`,
-  `${BASE}images/baker-hands.png`,
-  `${BASE}models/textures/cake_baseColor.png`,
-];
-const PRELOAD_FETCHES = [
-  `${BASE}models/scene.gltf`,
-  `${BASE}models/scene.bin`,
-];
-
 function preloadAssets() {
-  // Image cache warm-up.
-  PRELOAD_IMAGES.forEach((src) => {
-    const img = new Image();
-    img.decoding = "async";
-    img.src = src;
+  const idle =
+    (window as Window & { requestIdleCallback?: (cb: () => void) => void })
+      .requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1));
+  idle(() => {
+    [
+      `${BASE}images/celebration-cake.webp`,
+      `${BASE}images/everyday-bake.webp`,
+      `${BASE}images/chocolate-truffle.webp`,
+      `${BASE}images/baker-hands.webp`,
+    ].forEach((src) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.src = src;
+    });
+    [`${BASE}models/scene.gltf`, `${BASE}models/scene.bin`].forEach((url) => {
+      fetch(url, { cache: "force-cache" }).catch(() => {});
+    });
+    import("./CakeScene").catch(() => {});
   });
-  // 3D model files — fetch into HTTP cache so useGLTF resolves instantly.
-  PRELOAD_FETCHES.forEach((url) => {
-    fetch(url, { cache: "force-cache" }).catch(() => {});
-  });
-  // Kick off the 3D scene JS chunk so it's parsed before the user sees the hero.
-  import("./CakeScene").catch(() => {});
 }
 
 export function LoadingScreen({ onDone }: { onDone: () => void }) {
-  const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
+  const [phase, setPhase] = useState<"in" | "out">("in");
 
   useEffect(() => {
     preloadAssets();
-    const holdTimer = setTimeout(() => setPhase("hold"), 1200);
-    const outTimer = setTimeout(() => setPhase("out"), 3200);
-    const doneTimer = setTimeout(() => onDone(), 4000);
+    const outTimer = setTimeout(() => setPhase("out"), 600);
+    const doneTimer = setTimeout(() => onDone(), 1000);
     return () => {
-      clearTimeout(holdTimer);
       clearTimeout(outTimer);
       clearTimeout(doneTimer);
     };
@@ -57,7 +49,7 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none overflow-hidden"
           style={{ backgroundColor: "hsl(12, 44%, 92%)" }}
           exit={{ y: "-100%" }}
-          transition={{ duration: 0.85, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
         >
           <div
             className="absolute inset-0 pointer-events-none"
@@ -73,30 +65,20 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
                 key={i}
                 className="font-serif font-black text-foreground leading-none"
                 style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)" }}
-                initial={{ opacity: 0, y: 60, rotateX: -40 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
               >
                 {char}
               </motion.span>
             ))}
           </div>
 
-          <div className="relative z-10 w-32 h-[2px] bg-foreground/10 rounded-full overflow-hidden mb-6">
-            <motion.div
-              className="absolute inset-y-0 left-0 rounded-full"
-              style={{ backgroundColor: "#E3B23C" }}
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 1.8, ease: "linear" }}
-            />
-          </div>
-
           <motion.p
             className="relative z-10 text-xs font-sans font-semibold tracking-[0.3em] text-foreground/50 uppercase"
             initial={{ opacity: 0 }}
-            animate={{ opacity: phase === "hold" ? 1 : 0 }}
-            transition={{ duration: 0.6 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.25 }}
           >
             {TAGLINE}
           </motion.p>

@@ -16,15 +16,23 @@ export function TheCraft() {
               >
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/celebration-cake.png"
+                    src="/images/celebration-cake.webp"
                     alt="Celebration cake with gold leaf"
+                    loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="800"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/everyday-bake.png"
+                    src="/images/everyday-bake.webp"
                     alt="Everyday bakes like tea cake, milk buns, and cookies"
+                    loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="600"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -39,15 +47,23 @@ export function TheCraft() {
               >
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/chocolate-truffle.png"
+                    src="/images/chocolate-truffle.webp"
                     alt="Chocolate truffle cake slice"
+                    loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="600"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/baker-hands.png"
+                    src="/images/baker-hands.webp"
                     alt="Baker piping buttercream rosettes"
+                    loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="800"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
