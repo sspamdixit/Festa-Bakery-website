@@ -551,6 +551,48 @@ button.liquid-glass-primary:active {
   }
 }
 
+/* ─── Flat button override ─────────────────────────────────────────────
+   Buttons keep the frosted/blur (liquid glass) but lose the dimensional
+   shadows, specular dome, and hover lift. Text is bolder + slightly
+   shadowed for legibility while preserving original colors.
+─────────────────────────────────────────────────────────────────────── */
+a.liquid-glass,
+button.liquid-glass,
+a.liquid-glass-soft,
+button.liquid-glass-soft,
+a.liquid-glass-primary,
+button.liquid-glass-primary {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+}
+a.liquid-glass-primary,
+button.liquid-glass-primary {
+  text-shadow: 0 1px 1px rgba(120, 70, 0, 0.28);
+  font-weight: 700;
+}
+a.liquid-glass::before,  button.liquid-glass::before,
+a.liquid-glass::after,   button.liquid-glass::after,
+a.liquid-glass-soft::before, button.liquid-glass-soft::before,
+a.liquid-glass-primary::before, button.liquid-glass-primary::before,
+a.liquid-glass-primary::after,  button.liquid-glass-primary::after {
+  content: none;
+}
+a.liquid-glass:hover,  button.liquid-glass:hover,
+a.liquid-glass-soft:hover, button.liquid-glass-soft:hover,
+a.liquid-glass-primary:hover, button.liquid-glass-primary:hover {
+  transform: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+a.liquid-glass:active,  button.liquid-glass:active,
+a.liquid-glass-soft:active, button.liquid-glass-soft:active,
+a.liquid-glass-primary:active, button.liquid-glass-primary:active {
+  transform: scale(0.985);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
 @layer utilities {
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
