@@ -48,7 +48,11 @@ function Scene() {
   useFrame((state) => {
     if (!groupRef.current) return;
     // Oscillating half-rotation: sweep from -PI/2 to +PI/2 and back.
-    baseYRef.current = (1 - Math.cos(state.clock.elapsedTime * 0.4)) * 0.5 * (Math.PI / 2);
+    {
+      const phase = (1 - Math.cos(state.clock.elapsedTime * 0.4)) * 0.5; // 0..1
+      const eased = Math.pow(phase, 0.35); // bias toward 1 (right) so it dwells there
+      baseYRef.current = eased * (Math.PI / 2);
+    }
     // Mouse-driven tilt — small amplitude so neither cake nor shadow ever clip
     // out of the canvas. state.mouse is normalized to [-1, 1] within the canvas.
     const targetX = state.mouse.y * 0.12;
