@@ -18,12 +18,12 @@ export function OrderSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Order Fresh Cakes</h2>
+          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Place an Order</h2>
           <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-black text-foreground mb-6 md:mb-8 leading-[0.95]">
-            Ready to place an order?
+            Order your cake on WhatsApp.
           </h3>
           <p className="text-base md:text-xl text-foreground/75 font-sans font-medium mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">
-            Need a custom birthday cake, anniversary cake, or fresh bake? We bake to order with 48 hours notice for cakes and 24 hours for everyday bakes.
+            48 hours notice for celebration cakes, 24 hours for tea cakes and brownies. Pickup from Bhayli, Vadodara.
           </p>
 
           <Dialog>
@@ -31,7 +31,7 @@ export function OrderSection() {
               <button className="group relative inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center overflow-hidden bg-primary px-8 sm:px-12 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-12px_rgba(201, 82, 126,0.7)]">
                 <span className="relative z-10 flex items-center gap-3 font-sans tracking-wide text-base md:text-lg">
                   <MessageCircle className="w-5 h-5" />
-                  Order Cakes on WhatsApp
+                  Order on WhatsApp
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 z-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

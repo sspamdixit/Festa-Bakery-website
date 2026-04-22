@@ -10,7 +10,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-2">
             <h2 className="text-4xl md:text-5xl font-serif font-black text-foreground mb-3 md:mb-4">Festa.</h2>
             <p className="text-foreground/70 font-sans font-medium text-sm md:text-base max-w-sm leading-relaxed">
-              A home bakery in India for custom birthday cakes, anniversary cakes, celebration cakes, and fresh everyday bakes — made to order with care.
+              Eggless home bakery in Bhayli, Vadodara. Birthday cakes, fruit cakes, brownies and tea cakes — baked fresh on order day.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-foreground/15 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs font-sans font-semibold text-foreground/60">
-            &copy; {new Date().getFullYear()} Festa. Baked fresh in India.
+            &copy; {new Date().getFullYear()} Festa Bakes, Vadodara.
           </p>
           <div className="flex items-center gap-6 text-xs font-sans font-semibold text-foreground/60">
             <span className="hover:text-foreground cursor-pointer">Privacy</span>

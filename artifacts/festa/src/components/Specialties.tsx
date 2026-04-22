@@ -78,8 +78,8 @@ export function Specialties() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Our Menu</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Fresh bakes made to order.</h3>
+          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Menu & Pricing</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Eggless cakes, baked to order.</h3>
         </motion.div>
 
         <div className="space-y-12 md:space-y-20">

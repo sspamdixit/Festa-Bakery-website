@@ -27,9 +27,9 @@ export function CheckoutModal() {
 
   return (
     <DialogContent className="sm:max-w-xl rounded-3xl p-6 sm:p-8 border border-white/60 bg-card/85 backdrop-blur-xl backdrop-saturate-150 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
-      <DialogTitle className="text-2xl sm:text-3xl font-serif font-black text-foreground">Order fresh cakes</DialogTitle>
+      <DialogTitle className="text-2xl sm:text-3xl font-serif font-black text-foreground">Place your order</DialogTitle>
       <DialogDescription className="mt-2 text-sm sm:text-base text-muted-foreground">
-        Tell us the flavour, size, date, and message. We make custom cakes, birthday cakes, and celebration cakes to order.
+        Share the flavour, size, date and message on the cake. We'll confirm on WhatsApp.
       </DialogDescription>
       <div className="mt-6 grid gap-5">
         <div className="grid gap-2">

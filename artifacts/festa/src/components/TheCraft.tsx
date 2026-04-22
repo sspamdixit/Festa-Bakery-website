@@ -85,17 +85,17 @@ export function TheCraft() {
           >
             <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Craft</h2>
             <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[0.95] text-foreground mb-6 md:mb-8">
-              Baking, done with precision.
+              From Hyderabad to Vadodara.
             </h3>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                What began as a passion for small-batch excellence in Hyderabad has now officially found its home in Vadodara. Festa is a home bakery dedicated to fresh bakes with consistent texture, clean flavor, and careful finishing.
+                Festa started in Hyderabad as a small-batch project and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.
               </p>
               <p>
-                We use real butter, real cream, and real chocolate. No shortcuts. Every order is baked fresh, packed with care, and finished to feel premium.
+                Real butter, real cream, real chocolate. No premixes. Every cake is baked fresh on order day and packed to travel.
               </p>
               <p>
-                From birthday celebrations and anniversaries to tea-time bakes and gifting boxes, each recipe is built for flavor, softness, and dependable results.
+                Birthdays, anniversaries, baby showers, tea-time bakes and gifting boxes — built for flavour, softness and dependable results.
               </p>
             </div>
           </motion.div>
