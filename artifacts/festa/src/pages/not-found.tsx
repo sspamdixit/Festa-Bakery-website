@@ -9,30 +9,8 @@ export default function NotFound() {
         className="absolute inset-0 pointer-events-none -z-10 overflow-hidden"
         aria-hidden
       >
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: "60vw",
-            height: "60vw",
-            top: "-15%",
-            left: "-15%",
-            background:
-              "radial-gradient(circle, rgba(201, 82, 126,0.18) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: "50vw",
-            height: "50vw",
-            bottom: "-10%",
-            right: "-10%",
-            background:
-              "radial-gradient(circle, rgba(222,186,192,0.22) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
+        <div className="notfound-orb-1 absolute rounded-full" />
+        <div className="notfound-orb-2 absolute rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-xl w-full text-center">

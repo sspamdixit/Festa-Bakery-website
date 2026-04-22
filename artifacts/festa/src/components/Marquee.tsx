@@ -19,10 +19,7 @@ const repeated = [...ITEMS, ...ITEMS, ...ITEMS];
 
 export function Marquee() {
   return (
-    <div
-      className="overflow-hidden border-y border-foreground/10 py-4"
-      style={{ backgroundColor: "hsl(var(--card))" }}
-    >
+    <div className="bg-card-solid overflow-hidden border-y border-foreground/10 py-4">
       <div className="festa-marquee-track flex items-center gap-8 whitespace-nowrap will-change-transform">
         {repeated.map((item, i) => (
           <span

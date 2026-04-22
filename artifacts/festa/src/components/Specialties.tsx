@@ -109,10 +109,7 @@ export function Specialties() {
                         <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
                           ½ Kg
                         </div>
-                        <span
-                          className="block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
-                          style={{ color: "#C9527E" }}
-                        >
+                        <span className="text-festa-pink block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110">
                           {item.half}
                         </span>
                       </div>
@@ -120,10 +117,7 @@ export function Specialties() {
                         <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
                           1 Kg
                         </div>
-                        <span
-                          className="block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
-                          style={{ color: "#C9527E" }}
-                        >
+                        <span className="text-festa-pink block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110">
                           {item.kg}
                         </span>
                       </div>

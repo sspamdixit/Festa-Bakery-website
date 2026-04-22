@@ -653,3 +653,50 @@ button.liquid-glass-primary:active {
     inset: -1px;
   }
 }
+
+/* ─── Section utility classes (extracted from inline styles) ───────────── */
+.bg-card-solid       { background-color: hsl(var(--card)); }
+.text-festa-pink     { color: #C9527E; }
+
+.fade-to-card        { background: linear-gradient(to bottom, transparent, hsl(var(--card))); }
+.fade-to-background  { background: linear-gradient(to bottom, transparent, hsl(var(--background))); }
+
+.glow-pink-radial-soft {
+  background: radial-gradient(circle, rgba(201, 82, 126, 0.25) 0%, rgba(201, 82, 126, 0) 60%);
+  filter: blur(80px);
+}
+.glow-pink-spot {
+  background: radial-gradient(circle at 50% 40%, rgba(201, 82, 126, 0.25) 0%, rgba(222, 186, 192, 0) 60%);
+}
+
+/* Hero background orbs (size + colour live in CSS, animation already exists). */
+.festa-orb-1 {
+  width: 60vw; height: 60vw; top: -10%; left: -15%;
+  background: radial-gradient(circle, rgba(201, 82, 126, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+}
+.festa-orb-2 {
+  width: 50vw; height: 50vw; bottom: -5%; right: -10%;
+  background: radial-gradient(circle, rgba(222, 186, 192, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+}
+.festa-orb-3 {
+  width: 40vw; height: 40vw; top: 40%; left: 35%;
+  background: radial-gradient(circle, rgba(69, 123, 157, 0.12) 0%, transparent 70%);
+  filter: blur(70px);
+}
+
+/* 404 page background orbs. */
+.notfound-orb-1 {
+  width: 60vw; height: 60vw; top: -15%; left: -15%;
+  background: radial-gradient(circle, rgba(201, 82, 126, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+}
+.notfound-orb-2 {
+  width: 50vw; height: 50vw; bottom: -10%; right: -10%;
+  background: radial-gradient(circle, rgba(222, 186, 192, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.hero-cake-layer { opacity: 0.18; }
+.section-isolate { isolation: isolate; }

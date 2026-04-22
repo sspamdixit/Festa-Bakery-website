@@ -10,45 +10,14 @@ export function Hero() {
   return (
     <section className="festa-paper relative pt-20 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-transparent min-h-[92dvh] flex items-center lg:min-h-[100dvh]">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div
-          className="festa-orb-1 absolute rounded-full will-change-transform"
-          style={{
-            width: "60vw",
-            height: "60vw",
-            top: "-10%",
-            left: "-15%",
-            background: "radial-gradient(circle, rgba(201, 82, 126,0.18) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-        <div
-          className="festa-orb-2 absolute rounded-full will-change-transform"
-          style={{
-            width: "50vw",
-            height: "50vw",
-            bottom: "-5%",
-            right: "-10%",
-            background: "radial-gradient(circle, rgba(222,186,192,0.22) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-        <div
-          className="festa-orb-3 absolute rounded-full will-change-transform"
-          style={{
-            width: "40vw",
-            height: "40vw",
-            top: "40%",
-            left: "35%",
-            background: "radial-gradient(circle, rgba(69,123,157,0.12) 0%, transparent 70%)",
-            filter: "blur(70px)",
-          }}
-        />
+        <div className="festa-orb-1 absolute rounded-full will-change-transform" />
+        <div className="festa-orb-2 absolute rounded-full will-change-transform" />
+        <div className="festa-orb-3 absolute rounded-full will-change-transform" />
       </div>
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 overflow-visible"
-        style={{ opacity: 0.18 }}
+        className="hero-cake-layer pointer-events-none absolute inset-0 z-0 overflow-visible"
       >
         <div className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin] [transform:translate(-65%,-50%)] lg:[transform:translate(-95%,-50%)]">
           <CakeBaked />
@@ -176,12 +145,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div
-        className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-        style={{
-          background: "linear-gradient(to bottom, transparent, hsl(var(--card)))",
-        }}
-      />
+      <div className="fade-to-card absolute bottom-0 left-0 right-0 h-24 pointer-events-none" />
     </section>
   );
 }

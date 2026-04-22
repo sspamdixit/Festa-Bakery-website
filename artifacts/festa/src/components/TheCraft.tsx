@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function TheCraft() {
   return (
-    <section className="festa-paper py-16 md:py-28 lg:py-36 overflow-hidden relative" style={{ backgroundColor: "hsl(var(--card))" }}>
+    <section className="festa-paper bg-card-solid py-16 md:py-28 lg:py-36 overflow-hidden relative">
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
@@ -70,10 +70,7 @@ export function TheCraft() {
               </motion.div>
             </div>
 
-            <div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full z-0 pointer-events-none"
-              style={{ background: "radial-gradient(circle, rgba(201, 82, 126,0.25) 0%, rgba(201, 82, 126,0) 60%)", filter: "blur(80px)" }}
-            />
+            <div className="glow-pink-radial-soft absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full z-0 pointer-events-none" />
           </div>
 
           <motion.div
@@ -101,10 +98,7 @@ export function TheCraft() {
           </motion.div>
         </div>
       </div>
-      <div
-        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }}
-      />
+      <div className="fade-to-background absolute bottom-0 left-0 right-0 h-20 pointer-events-none" />
     </section>
   );
 }

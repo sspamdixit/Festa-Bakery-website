@@ -4,7 +4,7 @@ const WHATSAPP_NUMBER = "919963163227";
 
 export function Footer() {
   return (
-    <footer className="festa-paper py-12 md:py-20 border-t-2 border-foreground/10" style={{ backgroundColor: "hsl(var(--card))" }}>
+    <footer className="festa-paper bg-card-solid py-12 md:py-20 border-t-2 border-foreground/10">
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-2">

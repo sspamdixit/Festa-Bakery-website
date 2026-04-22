@@ -5,11 +5,8 @@ import { motion } from "framer-motion";
 
 export function OrderSection() {
   return (
-    <section id="order" className="festa-paper py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background" style={{ isolation: "isolate" }}>
-      <div
-        className="absolute inset-0 opacity-60 pointer-events-none"
-        style={{ background: "radial-gradient(circle at 50% 40%, rgba(201, 82, 126,0.25) 0%, rgba(222,186,192,0) 60%)" }}
-      />
+    <section id="order" className="festa-paper section-isolate py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background">
+      <div className="glow-pink-spot absolute inset-0 opacity-60 pointer-events-none" />
 
       <div className="container px-5 mx-auto max-w-3xl text-center relative z-10">
         <motion.div
@@ -51,10 +48,7 @@ export function OrderSection() {
           </a>
         </motion.div>
       </div>
-      <div
-        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--card)))" }}
-      />
+      <div className="fade-to-card absolute bottom-0 left-0 right-0 h-20 pointer-events-none" />
     </section>
   );
 }
