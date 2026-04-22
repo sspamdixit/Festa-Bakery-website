@@ -8,7 +8,7 @@ const DELAY_BASE = 0.15;
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-12 overflow-hidden bg-background lg:min-h-[100dvh] lg:flex lg:items-center">
+    <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-background lg:min-h-[100dvh] lg:flex lg:items-center">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div
           className="festa-orb-1 absolute rounded-full will-change-transform"
@@ -48,7 +48,7 @@ export function Hero() {
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-2 col-span-5 lg:col-span-5 relative h-[180px] sm:h-[240px] md:h-[340px] lg:h-[640px] w-full"
+            className="order-2 col-span-4 lg:col-span-5 relative h-[160px] sm:h-[240px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,14 +63,14 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-1 col-span-7 lg:col-span-7">
+          <div className="order-1 col-span-8 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: DELAY_BASE, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
-                Boutique Bakery · India
+              <h2 className="hidden sm:block text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
+                Boutique Bakery · Vadodara
               </h2>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <motion.span
@@ -108,7 +108,7 @@ export function Hero() {
                 </motion.span>
               </h1>
               <motion.p
-                className="text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-6 md:mb-12 leading-relaxed"
+                className="hidden sm:block text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-6 md:mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
@@ -149,7 +149,7 @@ export function Hero() {
                 href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
+                className="hidden sm:flex group items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
               >
                 <span className="w-7 h-7 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
