@@ -152,18 +152,24 @@ export function Hero() {
               }}
             />
             <Canvas
-              camera={{ position: [3.2, 1.4, 4.2], fov: 40 }}
+              camera={{ position: [3.2, 1.4, 4.2], fov: 38 }}
               dpr={[1, 2]}
               gl={{ antialias: true, alpha: true }}
               onCreated={({ gl }) => {
+                gl.toneMapping = 4; // ACESFilmicToneMapping
+                gl.toneMappingExposure = 1.25;
                 gl.domElement.addEventListener("webglcontextlost", (e) => e.preventDefault());
               }}
               fallback={null}
             >
-              <ambientLight intensity={0.7} />
-              <directionalLight position={[5, 8, 5]} intensity={1.2} color="#FFF3E0" castShadow />
-              <directionalLight position={[-5, 3, -3]} intensity={0.6} color="#457B9D" />
-              <pointLight position={[0, 4, 4]} intensity={0.8} color="#E3B23C" />
+              {/* dim fill — Environment handles primary IBL */}
+              <ambientLight intensity={0.25} />
+              {/* warm key light from upper-right */}
+              <directionalLight position={[6, 9, 5]} intensity={2.8} color="#FFF0DC" />
+              {/* cool-blue fill from left */}
+              <directionalLight position={[-6, 2, -4]} intensity={0.9} color="#C4DFFF" />
+              {/* golden rim from behind */}
+              <pointLight position={[-2, 3, -5]} intensity={2.2} color="#E3B23C" />
               <Hero3D />
             </Canvas>
           </motion.div>
