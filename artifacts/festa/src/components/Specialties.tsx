@@ -2,28 +2,67 @@ import { motion } from "framer-motion";
 
 const menuItems = [
   {
-    category: "Celebration Cakes",
+    category: "Standard Cakes",
     items: [
-      { name: "Chocolate Truffle", desc: "Rich Belgian chocolate sponge, dark ganache, and crisp chocolate shards for birthdays and celebrations." , price: "₹1,200 / kg" },
-      { name: "Rasmalai Pista Cake", desc: "Saffron sponge with cardamom cream, rasmalai flavour, and slivered pistachios.", price: "₹1,650 / kg" },
-      { name: "Red Velvet Rosette", desc: "Red velvet layers, cream cheese frosting, and hand-piped buttercream rosettes.", price: "₹1,400 / kg" },
-      { name: "Tiramisu Celebration", desc: "Espresso sponge, mascarpone cream, and a cocoa finish inspired by classic tiramisu.", price: "₹1,550 / kg" },
+      { name: "Vanilla", half: "₹1,010", kg: "₹2,020" },
+      { name: "Coffee", half: "₹1,010", kg: "₹2,020" },
+      { name: "Chocolate", half: "₹1,010", kg: "₹2,010" },
+      { name: "White Forest", half: "₹1,020", kg: "₹2,040" },
+      { name: "Black Forest", half: "₹1,040", kg: "₹2,080" },
+      { name: "Choc Walnut / Almond", half: "₹1,090", kg: "₹2,090" },
+      { name: "Chocolate All Over", half: "₹1,045", kg: "₹2,080" },
+      { name: "Chocolate Truffle", half: "₹1,045", kg: "₹2,090" },
+      { name: "Chocolate Ferrero Rocher", half: "₹1,050", kg: "₹2,090" },
+      { name: "Belgian Chocolate Ganache", half: "₹1,045", kg: "₹2,080" },
+      { name: "Lotus Biscoff", half: "₹1,045", kg: "₹2,090" },
+      { name: "Chocolate Chunks", half: "₹1,230", kg: "₹2,460" },
     ],
   },
   {
-    category: "Everyday Bakes",
+    category: "Fresh Fruit Cakes",
     items: [
-      { name: "Banana Walnut Loaf", desc: "Moist banana loaf with toasted walnuts and a light brown sugar crust.", price: "₹450" },
-      { name: "Brookies (Box of 6)", desc: "Brownie-cookie bars that are fudgy, gooey, and perfect for gifting.", price: "₹380" },
-      { name: "Cinnamon Rolls (4)", desc: "Soft rolls with cinnamon sugar swirl and cream cheese glaze.", price: "₹420" },
-      { name: "Whole Wheat Sourdough", desc: "48-hour cold ferment, crackling crust, and a naturally airy crumb.", price: "₹320" },
+      { name: "Pineapple", half: "₹950", kg: "₹1,900" },
+      { name: "Strawberry", half: "₹1,000", kg: "₹2,000" },
+      { name: "Raspberry", half: "₹1,180", kg: "₹2,360" },
+      { name: "Raspberry Apple", half: "₹1,100", kg: "₹2,200" },
+      { name: "Kiwi-Strawberry", half: "₹1,000", kg: "₹2,000" },
+      { name: "Blueberry", half: "₹1,000", kg: "₹2,000" },
+      { name: "Mango", half: "₹1,050", kg: "₹2,100" },
+      { name: "Pistachio", half: "₹1,090", kg: "₹2,180" },
     ],
   },
   {
-    category: "Custom Orders",
+    category: "Coffee Cakes",
     items: [
-      { name: "Designer Theme Cakes", desc: "Custom cakes for birthdays, anniversaries, baby showers, and corporate gifting.", price: "From ₹2,200 / kg" },
-      { name: "Customisation", desc: "Most cakes can be customised without compromising texture or flavour.", price: "Available" },
+      { name: "Mocha", half: "₹1,010", kg: "₹2,020" },
+      { name: "Irish Coffee", half: "₹1,010", kg: "₹2,020" },
+    ],
+  },
+  {
+    category: "Tea Cakes",
+    items: [
+      { name: "Nuts n Caramel", half: "₹800", kg: "₹1,600" },
+      { name: "Walnut", half: "₹820", kg: "₹1,640" },
+      { name: "Choc Walnut Brownie", half: "₹850", kg: "₹1,700" },
+      { name: "Whole Wheat Walnut Brownie", half: "₹950", kg: "₹1,900" },
+      { name: "Brownie", half: "₹1,020", kg: "₹2,040" },
+      { name: "Whole Wheat Almond", half: "₹850", kg: "₹1,700" },
+      { name: "Oats & Wheat Mixed Dry Fruits", half: "₹990", kg: "₹1,980" },
+      { name: "Whole Wheat Honey n Raisin", half: "₹820", kg: "₹1,640" },
+      { name: "Whole Wheat Honey n Walnut", half: "₹950", kg: "₹1,900" },
+      { name: "Jaggery Oats Whole Wheat", half: "₹900", kg: "₹1,800" },
+      { name: "Chocolate Oats Whole Wheat", half: "₹950", kg: "₹1,900" },
+      { name: "Oats Jowar", half: "₹900", kg: "₹1,800" },
+      { name: "Oats Jowar Dry Fruits", half: "₹1,040", kg: "₹2,080" },
+      { name: "Chocolate Oats Jowar", half: "₹1,040", kg: "₹2,080" },
+      { name: "Sugar / Gluten / Dairy Free", half: "₹1,040", kg: "₹2,080" },
+    ],
+  },
+  {
+    category: "Add-ons",
+    items: [
+      { name: "Cream Cheese Frosting", half: "₹250", kg: "₹500" },
+      { name: "Extra Nuts", half: "₹60", kg: "₹120" },
     ],
   },
 ];
@@ -56,26 +95,34 @@ export function Specialties() {
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-serif font-extrabold text-foreground">{section.category}</h4>
                 <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-secondary">{String(idx + 1).padStart(2, "0")}</span>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
+              <div className="hidden md:grid grid-cols-[1fr_auto_auto] gap-x-6 px-4 mb-3 text-[10px] font-sans font-bold tracking-[0.2em] uppercase text-muted-foreground/70">
+                <span>Item</span>
+                <span className="w-20 text-right">½ Kg</span>
+                <span className="w-20 text-right">1 Kg</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 md:gap-y-4">
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
+                    className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
                   >
-                    <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1 mb-2">
-                      <h5 className="text-base md:text-xl font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1">
+                    <div className="grid grid-cols-[1fr_auto_auto] items-baseline gap-x-6">
+                      <h5 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1">
                         {item.name}
                       </h5>
                       <span
-                        className="shrink-0 text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
+                        className="shrink-0 w-20 text-right text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
                         style={{ color: "#C9527E" }}
                       >
-                        {item.price}
+                        {item.half}
+                      </span>
+                      <span
+                        className="shrink-0 w-20 text-right text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
+                        style={{ color: "#C9527E" }}
+                      >
+                        {item.kg}
                       </span>
                     </div>
-                    <p className="text-sm md:text-base font-sans font-medium text-muted-foreground leading-relaxed">
-                      {item.desc}
-                    </p>
                   </div>
                 ))}
               </div>
