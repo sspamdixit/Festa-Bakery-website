@@ -155,7 +155,7 @@ export function Hero() {
                 <span className="w-7 h-7 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
                 </span>
-                Home Bakery in India
+                Bhayli, Vadodara
               </a>
             </motion.div>
           </div>

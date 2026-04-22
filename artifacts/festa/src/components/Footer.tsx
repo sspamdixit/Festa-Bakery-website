@@ -29,7 +29,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 pt-1">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Home Bakery<br />Vadodara, Gujarat</span>
+                <span>Home Bakery<br />Bhayli, Vadodara<br /><span className="text-foreground/60">Serving all of Vadodara</span></span>
               </li>
             </ul>
           </div>
