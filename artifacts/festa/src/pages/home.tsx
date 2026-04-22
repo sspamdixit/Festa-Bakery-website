@@ -1,3 +1,4 @@
+import { NavBar } from "@/components/NavBar";
 import { Hero } from "@/components/Hero";
 import { TheCraft } from "@/components/TheCraft";
 import { Specialties } from "@/components/Specialties";
@@ -7,6 +8,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <main className="w-full bg-background min-h-screen">
+      <NavBar />
       <Hero />
       <TheCraft />
       <Specialties />

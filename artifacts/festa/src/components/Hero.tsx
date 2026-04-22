@@ -7,36 +7,36 @@ import { CheckoutModal } from "./CheckoutModal";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center pt-20 pb-12 overflow-hidden bg-background">
-      <div className="container relative z-10 px-6 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <section className="relative min-h-[100dvh] flex items-center pt-20 pb-10 overflow-hidden bg-background">
+      <div className="container relative z-10 px-5 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-6">
+              <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">
                 Home Bakery · India
               </h2>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-5 md:mb-8">
                 Festa: <span className="text-secondary">Artisanal</span><br />
                 Baking, <span className="italic font-extrabold" style={{ color: "#E3B23C" }}>Redefined.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-12 leading-relaxed">
+              <p className="text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-8 md:mb-12 leading-relaxed">
                 Celebration cakes and everyday bakes, made fresh from our home kitchen. Obsessive consistency, real ingredients, signed before they leave.
               </p>
             </motion.div>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-primary px-8 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] hover:-translate-y-0.5">
+                  <button className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-primary px-8 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] hover:-translate-y-0.5 w-full sm:w-auto">
                     <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base">
                       Order Now
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -51,9 +51,9 @@ export function Hero() {
                 href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-sm font-sans font-semibold text-foreground transition-colors hover:text-secondary"
+                className="group flex items-center justify-center sm:justify-start gap-3 text-sm font-sans font-semibold text-foreground transition-colors hover:text-secondary"
               >
-                <span className="w-10 h-10 rounded-full border-2 border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all">
+                <span className="w-10 h-10 rounded-full border-2 border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-4 h-4" />
                 </span>
                 Google Business Profile
@@ -63,12 +63,11 @@ export function Hero() {
 
           {/* 3D Cake on the right */}
           <motion.div
-            className="lg:col-span-5 relative h-[420px] md:h-[520px] lg:h-[640px] w-full"
+            className="lg:col-span-5 relative h-[260px] sm:h-[360px] md:h-[480px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* radial halo */}
             <div
               className="absolute inset-0 -z-10"
               style={{

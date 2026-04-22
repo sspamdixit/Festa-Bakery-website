@@ -5,30 +5,30 @@ import { motion } from "framer-motion";
 
 export function OrderSection() {
   return (
-    <section id="order" className="py-28 md:py-36 relative overflow-hidden bg-background">
+    <section id="order" className="py-16 md:py-28 lg:py-36 relative overflow-hidden bg-background">
       <div
         className="absolute inset-0 opacity-60 pointer-events-none"
         style={{ background: "radial-gradient(circle at 50% 40%, rgba(227,178,60,0.25) 0%, rgba(222,186,192,0) 60%)" }}
       />
 
-      <div className="container px-6 mx-auto max-w-3xl text-center relative z-10">
+      <div className="container px-5 mx-auto max-w-3xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-6">Order</h2>
-          <h3 className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-foreground mb-8 leading-[0.95]">
+          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Order</h2>
+          <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-black text-foreground mb-6 md:mb-8 leading-[0.95]">
             Ready to place an order?
           </h3>
-          <p className="text-lg md:text-xl text-foreground/75 font-sans font-medium mb-12 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-foreground/75 font-sans font-medium mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">
             Cakes need 48 hours notice, everyday bakes 24 hours. Local pickup or arranged delivery. We'll confirm everything on WhatsApp — including pricing in INR.
           </p>
 
           <Dialog>
             <DialogTrigger asChild>
-              <button className="group relative inline-flex h-16 items-center justify-center overflow-hidden bg-primary px-12 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-12px_rgba(227,178,60,0.7)]">
+              <button className="group relative inline-flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center overflow-hidden bg-primary px-8 sm:px-12 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_-12px_rgba(227,178,60,0.7)]">
                 <span className="relative z-10 flex items-center gap-3 font-sans tracking-wide text-base md:text-lg">
                   <MessageCircle className="w-5 h-5" />
                   Start Your Order
