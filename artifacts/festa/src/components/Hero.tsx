@@ -123,6 +123,13 @@ export function Hero() {
               </Dialog>
 
               <a
+                href="#menu"
+                className="group inline-flex h-14 items-center justify-center px-8 rounded-full border-2 border-foreground/25 font-sans font-bold text-base text-foreground transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-0.5 w-full sm:w-auto"
+              >
+                View Menu
+              </a>
+
+              <a
                 href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"
                 rel="noopener noreferrer"
