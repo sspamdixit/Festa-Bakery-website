@@ -46,9 +46,9 @@ export function Hero() {
       </div>
 
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-10 items-center">
+        <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-1 lg:order-2 lg:col-span-5 relative h-[220px] sm:h-[300px] md:h-[420px] lg:h-[640px] w-full"
+            className="order-2 col-span-5 lg:col-span-5 relative h-[180px] sm:h-[240px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,7 +63,7 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-2 lg:order-1 lg:col-span-7">
+          <div className="order-1 col-span-7 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function Hero() {
               <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
                 Boutique Bakery · India
               </h2>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <motion.span
                   className="inline-block"
                   initial={{ opacity: 0, y: 30 }}
