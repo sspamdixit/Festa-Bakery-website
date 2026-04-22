@@ -50,7 +50,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 z-0 overflow-visible"
         style={{ opacity: 0.18 }}
       >
-        <div className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin] [transform:translate(-50%,-50%)] lg:[transform:translate(-95%,-50%)]">
+        <div className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin] [transform:translate(-65%,-50%)] lg:[transform:translate(-95%,-50%)]">
           <CakeBaked />
         </div>
       </div>

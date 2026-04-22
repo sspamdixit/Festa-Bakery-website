@@ -47,12 +47,16 @@ function Scene() {
 
   useFrame((state) => {
     if (!groupRef.current) return;
-    // Scroll-driven rotation: rightmost (+PI/2) at top of page, centered (0)
-    // by the time the user has scrolled one viewport height down.
+    // Scroll-driven rotation: rightmost at top of page, centered (0)
+    // by the time the user has scrolled down. On mobile we use a larger
+    // amplitude and a shorter scroll distance so the rotation reads clearly.
     const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
     const vh = typeof window !== "undefined" ? window.innerHeight : 1;
-    const progress = Math.min(1, Math.max(0, scrollY / vh));
-    baseYRef.current = (1 - progress) * (Math.PI / 2);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+    const distance = isMobile ? vh * 0.5 : vh;
+    const amplitude = isMobile ? Math.PI * 0.9 : Math.PI / 2;
+    const progress = Math.min(1, Math.max(0, scrollY / distance));
+    baseYRef.current = (1 - progress) * amplitude;
 
     // Mouse-driven tilt — small amplitude so neither cake nor shadow ever clip
     // out of the canvas. state.mouse is normalized to [-1, 1] within the canvas.
