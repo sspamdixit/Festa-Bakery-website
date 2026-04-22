@@ -17,14 +17,14 @@ export function TheCraft() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/celebration-cake.png"
-                    alt="Eggless celebration cake with gold leaf"
+                    alt="Celebration cake with gold leaf"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/everyday-bake.png"
-                    alt="Eggless everyday bakes like tea cake, milk buns, and cookies"
+                    alt="Everyday bakes like tea cake, milk buns, and cookies"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -40,14 +40,14 @@ export function TheCraft() {
                 <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/chocolate-truffle.png"
-                    alt="Eggless chocolate truffle cake slice"
+                    alt="Chocolate truffle cake slice"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/baker-hands.png"
-                    alt="Baker piping buttercream rosettes on an eggless cake"
+                    alt="Baker piping buttercream rosettes"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -69,17 +69,17 @@ export function TheCraft() {
           >
             <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Craft</h2>
             <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[0.95] text-foreground mb-6 md:mb-8">
-              Eggless baking, done with precision.
+              Baking, done with precision.
             </h3>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                Festa is an eggless home bakery in India, making small-batch cakes and fresh bakes with consistent texture, clean flavour, and careful finishing.
+                Festa is a home bakery in India, making small-batch cakes and fresh bakes with consistent texture, clean flavour, and careful finishing.
               </p>
               <p>
                 We use real butter, real cream, and real chocolate. No premixes. No shortcuts. Every order is baked fresh, packed with care, and finished to feel premium.
               </p>
               <p>
-                From birthday cakes and anniversary cakes to tea-time bakes and gifting boxes, each recipe is built for flavour, softness, and dependable eggless results.
+                From birthday cakes and anniversary cakes to tea-time bakes and gifting boxes, each recipe is built for flavour, softness, and dependable results.
               </p>
             </div>
           </motion.div>

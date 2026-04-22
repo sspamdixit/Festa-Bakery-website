@@ -1,6 +1,4 @@
 const ITEMS = [
-  "Eggless",
-  "·",
   "Freshly Baked",
   "·",
   "Custom Cakes",

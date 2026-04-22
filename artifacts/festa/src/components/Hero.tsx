@@ -70,7 +70,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: DELAY_BASE, ease: [0.16, 1, 0.3, 1] }}
             >
               <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
-                Eggless Home Bakery · India
+                Boutique Bakery · India
               </h2>
               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <motion.span
@@ -114,7 +114,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
               >
-                Festa is a boutique eggless home bakery in India, making custom celebration cakes, everyday bakes, and premium desserts with real ingredients and careful finishing.
+                Festa makes custom celebration cakes, everyday bakes, and premium desserts with real ingredients and careful finishing.
               </motion.p>
             </motion.div>
 
@@ -147,7 +147,7 @@ export function Hero() {
               </div>
 
               <a
-                href="https://www.google.com/search?q=Festa+home+bakery+eggless"
+                href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
@@ -155,7 +155,7 @@ export function Hero() {
                 <span className="w-7 h-7 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
                 </span>
-                Eggless Home Bakery in India
+                Home Bakery in India
               </a>
             </motion.div>
           </div>

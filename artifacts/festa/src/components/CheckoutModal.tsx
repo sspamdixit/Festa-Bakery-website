@@ -11,9 +11,9 @@ export function CheckoutModal() {
 
   return (
     <DialogContent className="sm:max-w-xl rounded-3xl border-foreground/10 bg-background p-6 sm:p-8">
-      <DialogTitle className="text-2xl sm:text-3xl font-serif font-black text-foreground">Order your eggless cake</DialogTitle>
+      <DialogTitle className="text-2xl sm:text-3xl font-serif font-black text-foreground">Order fresh cakes</DialogTitle>
       <DialogDescription className="mt-2 text-sm sm:text-base text-muted-foreground">
-        Tell us the cake flavour, size, date, and message. We make custom eggless cakes, birthday cakes, and celebration cakes to order.
+        Tell us the flavour, size, date, and message. We make custom cakes, birthday cakes, and celebration cakes to order.
       </DialogDescription>
       <div className="mt-6 grid gap-5">
         <div className="grid gap-2">
@@ -32,7 +32,7 @@ export function CheckoutModal() {
             onChange={(e) => setDetails(e.target.value)}
             required
             className="min-h-[130px] rounded-xl border-foreground/15 bg-card/40 p-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium resize-none"
-            placeholder="1 kg eggless chocolate truffle cake for Saturday, Happy Birthday Aanya on top..."
+            placeholder="1 kg chocolate truffle cake for Saturday, Happy Birthday Aanya on top..."
           />
         </div>
       </div>

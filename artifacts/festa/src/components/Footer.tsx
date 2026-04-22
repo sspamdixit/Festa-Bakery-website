@@ -10,7 +10,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-2">
             <h2 className="text-4xl md:text-5xl font-serif font-black text-foreground mb-3 md:mb-4">Festa.</h2>
             <p className="text-foreground/70 font-sans font-medium text-sm md:text-base max-w-sm leading-relaxed">
-              Eggless home bakery in India for custom birthday cakes, anniversary cakes, celebration cakes, and fresh everyday bakes — made to order with care.
+              A home bakery in India for custom birthday cakes, anniversary cakes, celebration cakes, and fresh everyday bakes — made to order with care.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 pt-1">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Eggless Home Bakery<br />Vadodara, Gujarat</span>
+                <span>Home Bakery<br />Vadodara, Gujarat</span>
               </li>
             </ul>
           </div>
@@ -48,7 +48,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.google.com/search?q=Festa+eggless+home+bakery" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                <a href="https://www.google.com/search?q=Festa+home+bakery" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-secondary transition-colors">
                   <MapPin className="w-4 h-4 shrink-0" /> Google Business
                 </a>
               </li>
@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-foreground/15 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs font-sans font-semibold text-foreground/60">
-            &copy; {new Date().getFullYear()} Festa. Eggless cakes baked fresh in India.
+            &copy; {new Date().getFullYear()} Festa. Baked fresh in India.
           </p>
           <div className="flex items-center gap-6 text-xs font-sans font-semibold text-foreground/60">
             <span className="hover:text-foreground cursor-pointer">Privacy</span>

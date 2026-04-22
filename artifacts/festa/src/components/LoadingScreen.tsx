@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LETTERS = "Festa.".split("");
-const TAGLINE = "Eggless Baking, Freshly Made.";
+const TAGLINE = "Baked Fresh, Every Time.";
 
 export function LoadingScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
