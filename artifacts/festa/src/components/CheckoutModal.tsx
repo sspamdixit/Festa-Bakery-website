@@ -4,6 +4,9 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+const WHATSAPP_NUMBER = "919999999999"; // TODO: replace with real Festa number (country code + number, no +)
 
 export function CheckoutModal() {
   const [name, setName] = useState("");
@@ -14,65 +17,76 @@ export function CheckoutModal() {
     e.preventDefault();
     if (!name || !phone || !details) return;
 
-    const message = `Hi Festa! I'd like to place an order.\n\nName: ${name}\nPhone: ${phone}\nOrder: ${details}`;
+    const message = `Namaste Festa! I'd like to place an order.\n\nName: ${name}\nPhone: ${phone}\nOrder: ${details}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/15551234567?text=${encodedMessage}`;
-    
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   };
 
   return (
-    <DialogContent className="sm:max-w-[500px] border-border bg-card p-0 overflow-hidden">
-      <div className="p-8">
+    <DialogContent className="sm:max-w-[520px] border-foreground/10 bg-background p-0 overflow-hidden rounded-3xl">
+      <div className="p-8 md:p-10">
         <DialogHeader className="mb-8">
-          <DialogTitle className="text-3xl font-serif font-light text-foreground">Place an Order</DialogTitle>
-          <DialogDescription className="text-muted-foreground font-sans font-light">
-            Tell us what you'd like. We'll connect on WhatsApp to confirm details, availability, and pickup time.
+          <DialogTitle className="text-3xl md:text-4xl font-serif font-extrabold text-foreground">
+            Place Your Order
+          </DialogTitle>
+          <DialogDescription className="text-muted-foreground font-sans font-medium pt-2">
+            Tell us what you'd like. We'll continue on WhatsApp to confirm flavours, pickup time and pricing in INR.
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-xs uppercase tracking-wider text-muted-foreground">Your Name</Label>
-              <Input 
-                id="name" 
-                value={name} 
-                onChange={(e) => setName(e.target.value)} 
-                required 
-                className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:border-primary text-base transition-colors"
-                placeholder="Jane Doe"
-              />
-            </div>
-            
-            <div className="space-y-2">
-              <Label htmlFor="phone" className="text-xs uppercase tracking-wider text-muted-foreground">Phone Number</Label>
-              <Input 
-                id="phone" 
-                type="tel"
-                value={phone} 
-                onChange={(e) => setPhone(e.target.value)} 
-                required 
-                className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:border-primary text-base transition-colors"
-                placeholder="+1 (555) 000-0000"
+              <Label htmlFor="name" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
+                Your Name
+              </Label>
+              <Input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium"
+                placeholder="Priya Sharma"
               />
             </div>
 
-            <div className="space-y-2 pt-2">
-              <Label htmlFor="details" className="text-xs uppercase tracking-wider text-muted-foreground">Order Details</Label>
-              <Textarea 
-                id="details" 
-                value={details} 
-                onChange={(e) => setDetails(e.target.value)} 
-                required 
-                className="min-h-[120px] rounded border border-border bg-transparent p-3 focus-visible:ring-1 focus-visible:ring-primary text-base transition-colors resize-none"
-                placeholder="E.g., 1x Espresso Opera cake for Friday..."
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
+                Phone (WhatsApp)
+              </Label>
+              <Input
+                id="phone"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium"
+                placeholder="+91 98765 43210"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="details" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
+                Order Details
+              </Label>
+              <Textarea
+                id="details"
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                required
+                className="min-h-[130px] rounded-xl border-foreground/15 bg-card/40 p-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium resize-none"
+                placeholder="1 kg chocolate truffle cake for Saturday, eggless, 'Happy Birthday Aanya' on top..."
               />
             </div>
           </div>
 
-          <Button type="submit" className="w-full h-14 bg-primary text-primary-foreground font-sans tracking-wide hover:opacity-90 rounded-none text-base transition-all duration-300">
-            Continue to WhatsApp
+          <Button
+            type="submit"
+            className="group w-full h-14 bg-primary text-primary-foreground font-sans font-bold tracking-wide rounded-full text-base hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] transition-all"
+          >
+            Continue on WhatsApp
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </form>
       </div>

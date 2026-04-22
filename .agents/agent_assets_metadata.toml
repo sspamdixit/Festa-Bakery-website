@@ -24,3 +24,27 @@ id = "OPX-lFgUK1fT8lGrVw5Z-"
 uri = "file://artifacts/festa/public/images/tart.png"
 type = "image"
 title = "elegant fruit tart"
+
+[[generated]]
+id = "WWoDJKk234O4vRojp88fF"
+uri = "file://attached_assets/generated_images/generated_image_0.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "kdra21bvx391gAdn8_Da5"
+uri = "file://attached_assets/generated_images/generated_image_1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "umJ4bJTC2ErfBUiATGKMn"
+uri = "file://attached_assets/generated_images/generated_image_2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "kQ0goV067nF-92gmpjQQy"
+uri = "file://attached_assets/generated_images/generated_image_3.png"
+type = "image"
+title = "generated_image"

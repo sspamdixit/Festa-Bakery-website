@@ -75,43 +75,43 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 30 26% 96%;
-  --foreground: 20 13% 9%;
-  --border: 30 15% 85%;
-  --card: 30 26% 98%;
-  --card-foreground: 20 13% 9%;
-  --card-border: 30 15% 85%;
-  --sidebar: 30 26% 96%;
-  --sidebar-foreground: 20 13% 9%;
-  --sidebar-border: 30 15% 85%;
-  --sidebar-primary: 27 52% 57%;
-  --sidebar-primary-foreground: 30 26% 96%;
-  --sidebar-accent: 30 20% 90%;
-  --sidebar-accent-foreground: 20 13% 9%;
-  --sidebar-ring: 27 52% 57%;
-  --popover: 30 26% 98%;
-  --popover-foreground: 20 13% 9%;
-  --popover-border: 30 15% 85%;
-  --primary: 27 52% 57%;
-  --primary-foreground: 30 26% 96%;
-  --secondary: 30 20% 90%;
-  --secondary-foreground: 20 13% 9%;
-  --muted: 30 15% 90%;
-  --muted-foreground: 20 10% 40%;
-  --accent: 30 20% 90%;
-  --accent-foreground: 20 13% 9%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 30 26% 96%;
-  --input: 30 15% 85%;
-  --ring: 27 52% 57%;
-  --chart-1: 27 52% 57%;
-  --chart-2: 20 13% 9%;
-  --chart-3: 30 20% 90%;
-  --chart-4: 20 10% 40%;
-  --chart-5: 0 84% 60%;
+  --background: 12 44% 92%;
+  --foreground: 210 40% 14%;
+  --border: 350 25% 78%;
+  --card: 351 41% 80%;
+  --card-foreground: 210 40% 14%;
+  --card-border: 350 25% 70%;
+  --sidebar: 12 44% 92%;
+  --sidebar-foreground: 210 40% 14%;
+  --sidebar-border: 350 25% 78%;
+  --sidebar-primary: 43 75% 52%;
+  --sidebar-primary-foreground: 210 40% 14%;
+  --sidebar-accent: 351 41% 80%;
+  --sidebar-accent-foreground: 210 40% 14%;
+  --sidebar-ring: 43 75% 52%;
+  --popover: 12 44% 96%;
+  --popover-foreground: 210 40% 14%;
+  --popover-border: 350 25% 78%;
+  --primary: 43 75% 52%;
+  --primary-foreground: 210 40% 14%;
+  --secondary: 204 38% 44%;
+  --secondary-foreground: 12 44% 96%;
+  --muted: 351 30% 86%;
+  --muted-foreground: 210 22% 32%;
+  --accent: 204 38% 44%;
+  --accent-foreground: 12 44% 96%;
+  --destructive: 0 70% 45%;
+  --destructive-foreground: 12 44% 96%;
+  --input: 350 25% 78%;
+  --ring: 43 75% 52%;
+  --chart-1: 43 75% 52%;
+  --chart-2: 204 38% 44%;
+  --chart-3: 351 41% 80%;
+  --chart-4: 210 40% 14%;
+  --chart-5: 0 70% 45%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Cormorant', serif;
+  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --app-font-serif: 'Archivo', sans-serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0;
   
@@ -177,7 +177,7 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light;
+    @apply font-serif font-extrabold tracking-tight;
   }
 }
 
