@@ -1,6 +1,5 @@
-import { Canvas } from "@react-three/fiber";
-import { Hero3D } from "./Hero3D";
 import { motion } from "framer-motion";
+import { CakeBaked } from "./CakeBaked";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
@@ -151,27 +150,7 @@ export function Hero() {
                   "radial-gradient(circle at 50% 55%, rgba(227,178,60,0.45) 0%, rgba(222,186,192,0.0) 60%)",
               }}
             />
-            <Canvas
-              camera={{ position: [3.2, 1.4, 4.2], fov: 38 }}
-              dpr={[1, 2]}
-              gl={{ antialias: true, alpha: true }}
-              onCreated={({ gl }) => {
-                gl.toneMapping = 4; // ACESFilmicToneMapping
-                gl.toneMappingExposure = 1.25;
-                gl.domElement.addEventListener("webglcontextlost", (e) => e.preventDefault());
-              }}
-              fallback={null}
-            >
-              {/* dim fill — Environment handles primary IBL */}
-              <ambientLight intensity={0.25} />
-              {/* warm key light from upper-right */}
-              <directionalLight position={[6, 9, 5]} intensity={2.8} color="#FFF0DC" />
-              {/* cool-blue fill from left */}
-              <directionalLight position={[-6, 2, -4]} intensity={0.9} color="#C4DFFF" />
-              {/* golden rim from behind */}
-              <pointLight position={[-2, 3, -5]} intensity={2.2} color="#E3B23C" />
-              <Hero3D />
-            </Canvas>
+            <CakeBaked />
           </motion.div>
         </div>
       </div>

@@ -214,6 +214,17 @@
 .festa-orb-3 { animation: orb-drift-3 20s ease-in-out infinite 5s; }
 .festa-marquee-track { animation: marquee-scroll 22s linear infinite; }
 
+@keyframes cake-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes spark-pulse {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50%       { opacity: 0.7; transform: scale(1); }
+}
+.festa-cake-float { animation: cake-float 4.5s ease-in-out infinite; }
+.festa-spark      { animation: spark-pulse var(--dur, 2.5s) ease-in-out infinite; }
+
 @layer utilities {
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
