@@ -92,7 +92,7 @@ export function TheCraft() {
                 Festa started in Hyderabad as a small-batch project and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.
               </p>
               <p>
-                Real butter, real cream, real chocolate. No premixes. Every cake is baked fresh on order day and packed to travel.
+                Real butter, real cream, real chocolate. No compromises. Every cake is baked fresh on order day and packed to travel.
               </p>
               <p>
                 Birthdays, anniversaries, baby showers, tea-time bakes and gifting boxes — built for flavour, softness and dependable results.
