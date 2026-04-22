@@ -10,11 +10,14 @@ const WHATSAPP_NUMBER = "919963163227";
 
 export function CheckoutModal() {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [details, setDetails] = useState("");
 
+  const canSubmit = name.trim() && phone.trim() && details.trim();
+
   const handleContinue = () => {
-    if (!details.trim()) return;
-    const message = `Hi Festa!${name.trim() ? ` I'm ${name.trim()}.` : ""}\n\nI'd like to place an order:\n${details.trim()}`;
+    if (!canSubmit) return;
+    const message = `Namaste Festa! I'd like to place an order.\n\nName: ${name.trim()}\nPhone: ${phone.trim()}\nOrder: ${details.trim()}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -39,6 +42,19 @@ export function CheckoutModal() {
           />
         </div>
         <div className="grid gap-2">
+          <Label htmlFor="phone" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
+            Phone Number
+          </Label>
+          <Input
+            id="phone"
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="+91 98765 43210"
+            className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4"
+          />
+        </div>
+        <div className="grid gap-2">
           <Label htmlFor="details" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
             Order Details
           </Label>
@@ -56,7 +72,7 @@ export function CheckoutModal() {
       <Button
         type="button"
         onClick={handleContinue}
-        disabled={!details.trim()}
+        disabled={!canSubmit}
         className="group mt-6 w-full h-14 bg-primary text-primary-foreground font-sans font-bold tracking-wide rounded-full text-base hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
       >
         Continue on WhatsApp
