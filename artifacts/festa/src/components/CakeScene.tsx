@@ -67,7 +67,7 @@ function Scene() {
 
       <ContactShadows position={[0, -1.4, 0]} opacity={0.22} scale={4} blur={2.4} far={3} color="#3d2b1f" />
 
-      <group ref={groupRef} scale={0.42}>
+      <group ref={groupRef} scale={0.36}>
         <Suspense fallback={null}>
           <Model />
         </Suspense>
@@ -79,7 +79,7 @@ function Scene() {
 export default function CakeScene() {
   return (
     <Canvas
-      camera={{ position: [3.2, 1.4, 4.2], fov: 38 }}
+      camera={{ position: [3.2, 1.4, 4.2], fov: 44 }}
       dpr={[1, 1.5]}
       performance={{ min: 0.5 }}
       gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
