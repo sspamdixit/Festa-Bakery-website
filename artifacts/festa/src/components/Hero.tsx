@@ -48,7 +48,7 @@ export function Hero() {
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-2 col-span-4 sm:col-span-5 lg:col-span-5 relative h-[180px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
+            className="order-2 col-span-3 sm:col-span-5 lg:col-span-5 relative h-[160px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,7 +63,7 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-1 col-span-8 sm:col-span-7 lg:col-span-7">
+          <div className="order-1 col-span-9 sm:col-span-7 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function Hero() {
               <h2 className="hidden sm:block text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
                 Boutique Bakery · Vadodara
               </h2>
-              <h1 className="text-[2.1rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
+              <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <span className="block whitespace-nowrap">
                   <motion.span
                     className="inline-block"
@@ -157,27 +157,25 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: DELAY_BASE + 0.55, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex h-11 w-full sm:w-auto items-stretch rounded-full border border-foreground/15 bg-card/70 backdrop-blur-sm overflow-hidden">
+          <div className="flex flex-row items-stretch gap-3 w-full sm:w-auto">
             <div
               role="img"
               aria-label="100% pure vegetarian"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 bg-[#0a8a3a]/[0.07]"
+              className="flex-1 sm:flex-none inline-flex h-10 items-center justify-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/[0.06] px-4"
             >
               <span className="inline-flex items-center justify-center w-3.5 h-3.5 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
                 <span className="block w-1 h-1 rounded-full bg-[#0a8a3a]" />
               </span>
               <span className="text-[11px] font-sans font-bold tracking-[0.14em] uppercase text-[#0a8a3a] whitespace-nowrap">
-                Pure Veg
+                100% Pure Veg
               </span>
             </div>
-
-            <div className="w-px bg-foreground/15 shrink-0" aria-hidden="true" />
 
             <a
               href="https://www.google.com/search?q=Festa+home+bakery"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 text-[11px] font-sans font-bold tracking-[0.14em] uppercase text-foreground/70 transition-colors hover:text-secondary"
+              className="group flex-1 sm:flex-none inline-flex h-10 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.04] px-4 text-[11px] font-sans font-bold tracking-[0.14em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
             >
               <MapPin className="w-3.5 h-3.5 shrink-0" />
               <span className="whitespace-nowrap">Bhayli, Vadodara</span>
