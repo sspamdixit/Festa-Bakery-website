@@ -79,13 +79,14 @@ function Scene() {
 export default function CakeScene() {
   return (
     <Canvas
-      camera={{ position: [3.2, 1.4, 4.2], fov: 44 }}
+      camera={{ position: [0, 5.2, 3.6], fov: 44 }}
       dpr={[1, 1.5]}
       performance={{ min: 0.5 }}
       gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
-      onCreated={({ gl }) => {
+      onCreated={({ gl, camera }) => {
         gl.toneMapping = 4; // ACESFilmicToneMapping
         gl.toneMappingExposure = 1.2;
+        camera.lookAt(0, 0, 0);
       }}
     >
       <Scene />
