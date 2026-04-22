@@ -30,7 +30,7 @@ export function Hero3D() {
 
   return (
     <Float speed={1.2} rotationIntensity={0.15} floatIntensity={0.5}>
-      <group ref={groupRef} scale={0.55}>
+      <group ref={groupRef} scale={0.85}>
         <Suspense fallback={null}>
           <Model />
         </Suspense>
