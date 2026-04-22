@@ -4,10 +4,41 @@ import { motion, AnimatePresence } from "framer-motion";
 const LETTERS = "Festa.".split("");
 const TAGLINE = "Baked Fresh, Every Time.";
 
+const BASE = import.meta.env.BASE_URL;
+
+// Assets to warm in the browser cache while the loader is on screen.
+const PRELOAD_IMAGES = [
+  `${BASE}images/celebration-cake.png`,
+  `${BASE}images/everyday-bake.png`,
+  `${BASE}images/chocolate-truffle.png`,
+  `${BASE}images/baker-hands.png`,
+  `${BASE}models/textures/cake_baseColor.png`,
+];
+const PRELOAD_FETCHES = [
+  `${BASE}models/scene.gltf`,
+  `${BASE}models/scene.bin`,
+];
+
+function preloadAssets() {
+  // Image cache warm-up.
+  PRELOAD_IMAGES.forEach((src) => {
+    const img = new Image();
+    img.decoding = "async";
+    img.src = src;
+  });
+  // 3D model files — fetch into HTTP cache so useGLTF resolves instantly.
+  PRELOAD_FETCHES.forEach((url) => {
+    fetch(url, { cache: "force-cache" }).catch(() => {});
+  });
+  // Kick off the 3D scene JS chunk so it's parsed before the user sees the hero.
+  import("./CakeScene").catch(() => {});
+}
+
 export function LoadingScreen({ onDone }: { onDone: () => void }) {
   const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
 
   useEffect(() => {
+    preloadAssets();
     const holdTimer = setTimeout(() => setPhase("hold"), 1200);
     const outTimer = setTimeout(() => setPhase("out"), 3200);
     const doneTimer = setTimeout(() => onDone(), 4000);
