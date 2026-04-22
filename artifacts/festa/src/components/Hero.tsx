@@ -147,16 +147,16 @@ export function Hero() {
                 </a>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-row items-center gap-3">
                 <div
                   role="img"
                   aria-label="100% pure vegetarian"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5"
                 >
                   <span className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
                     <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
                   </span>
-                  <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a]">
+                  <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a] whitespace-nowrap">
                     100% Pure Veg
                   </span>
                 </div>
@@ -165,10 +165,10 @@ export function Hero() {
                   href="https://www.google.com/search?q=Festa+home+bakery"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.03] px-3 py-1.5 text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
+                  className="group flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.03] px-3 py-1.5 text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
                 >
                   <MapPin className="w-3.5 h-3.5 shrink-0" />
-                  Bhayli, Vadodara
+                  <span className="whitespace-nowrap">Bhayli, Vadodara</span>
                 </a>
               </div>
             </motion.div>
