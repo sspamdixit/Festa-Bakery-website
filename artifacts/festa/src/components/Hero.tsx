@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
+import { CakeBaked } from "./CakeBaked";
 
 const DELAY_BASE = 0.15;
 
@@ -42,6 +43,16 @@ export function Hero() {
             filter: "blur(70px)",
           }}
         />
+      </div>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+        style={{ opacity: 0.18 }}
+      >
+        <div className="w-[140vw] h-[140vw] max-w-[1100px] max-h-[1100px]">
+          <CakeBaked />
+        </div>
       </div>
 
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full text-center">
