@@ -14,7 +14,9 @@ export function NavBar() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 h-16 flex items-center transition-all duration-500 ${
-        scrolled ? "liquid-glass" : ""
+        scrolled
+          ? "bg-card/70 backdrop-blur-xl backdrop-saturate-150 border-b border-foreground/10 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.12)]"
+          : "bg-transparent"
       }`}
       style={{ borderRadius: 0 }}
       initial={{ opacity: 0, y: -16 }}
