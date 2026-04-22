@@ -48,7 +48,7 @@ export function Hero() {
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-2 col-span-5 sm:col-span-5 lg:col-span-5 relative h-[200px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
+            className="order-2 col-span-4 sm:col-span-5 lg:col-span-5 relative h-[150px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,7 +63,7 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-1 col-span-7 sm:col-span-7 lg:col-span-7">
+          <div className="order-1 col-span-8 sm:col-span-7 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,10 +128,10 @@ export function Hero() {
               <div className="flex flex-row gap-3">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="liquid-glass-primary group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden whitespace-nowrap px-7 sm:px-8 font-bold rounded-full">
-                      <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base sm:text-base whitespace-nowrap">
+                    <button className="liquid-glass-primary group relative inline-flex h-12 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden whitespace-nowrap px-4 sm:px-8 font-bold rounded-full">
+                      <span className="relative z-10 flex items-center gap-1.5 sm:gap-2 font-sans tracking-wide text-sm sm:text-base whitespace-nowrap">
                         Order Now
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
                       <div className="absolute inset-0 z-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     </button>
@@ -141,7 +141,7 @@ export function Hero() {
 
                 <a
                   href="#menu"
-                  className="liquid-glass inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-7 sm:px-8 rounded-full font-sans font-bold text-base sm:text-base text-foreground transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
+                  className="liquid-glass inline-flex h-12 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-4 sm:px-8 rounded-full font-sans font-bold text-sm sm:text-base text-foreground transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
                 >
                   View Menu
                 </a>
