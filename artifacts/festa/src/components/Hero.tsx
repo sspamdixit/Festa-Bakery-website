@@ -73,22 +73,24 @@ export function Hero() {
                 Boutique Bakery · Vadodara
               </h2>
               <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
-                <motion.span
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: DELAY_BASE + 0.05, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  Eggless
-                </motion.span>{" "}
-                <motion.span
-                  className="inline-block text-secondary"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: DELAY_BASE + 0.12, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  Cakes
-                </motion.span>
+                <span className="whitespace-nowrap">
+                  <motion.span
+                    className="inline-block"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: DELAY_BASE + 0.05, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    Eggless
+                  </motion.span>{" "}
+                  <motion.span
+                    className="inline-block text-secondary"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: DELAY_BASE + 0.12, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    Cakes
+                  </motion.span>
+                </span>
                 <br />
                 <motion.span
                   className="inline-block"
