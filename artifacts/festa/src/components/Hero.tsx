@@ -147,6 +147,19 @@ export function Hero() {
                 </a>
               </div>
 
+              <div
+                role="img"
+                aria-label="100% pure vegetarian"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5 self-start"
+              >
+                <span className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
+                  <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
+                </span>
+                <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a]">
+                  100% Pure Veg
+                </span>
+              </div>
+
               <a
                 href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"

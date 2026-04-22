@@ -24,20 +24,9 @@ export function NavBar() {
       <div className="container px-5 mx-auto max-w-7xl flex items-center justify-between">
         <a
           href="/"
-          className="flex items-center gap-2.5 text-2xl font-serif font-black text-foreground tracking-tight leading-none"
+          className="text-2xl font-serif font-black text-foreground tracking-tight leading-none"
         >
           Festa.
-          <span
-            role="img"
-            aria-label="Pure vegetarian"
-            title="100% Pure Veg"
-            className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white"
-          >
-            <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
-          </span>
-          <span className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a]">
-            100% Pure Veg
-          </span>
         </a>
 
         <nav className="flex items-center gap-2 sm:gap-4">
