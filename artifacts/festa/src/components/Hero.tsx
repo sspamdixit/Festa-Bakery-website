@@ -8,7 +8,7 @@ const DELAY_BASE = 0.15;
 
 export function Hero() {
   return (
-    <section className="festa-paper relative pt-20 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-transparent lg:min-h-[100dvh] lg:flex lg:items-center">
+    <section className="festa-paper relative pt-20 pb-10 md:pt-20 md:pb-12 overflow-hidden bg-transparent min-h-[92dvh] flex items-center lg:min-h-[100dvh]">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div
           className="festa-orb-1 absolute rounded-full will-change-transform"
