@@ -23,7 +23,7 @@ export function NavBar() {
       }}
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: 2.8, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, delay: 2.0, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="container px-5 mx-auto max-w-7xl flex items-center justify-between">
         <a
@@ -39,12 +39,6 @@ export function NavBar() {
             className="hidden sm:inline text-sm font-sans font-semibold text-foreground/70 hover:text-foreground transition-colors px-3 py-1.5"
           >
             Menu
-          </a>
-          <a
-            href="#order"
-            className="hidden sm:inline text-sm font-sans font-semibold text-foreground/70 hover:text-foreground transition-colors px-3 py-1.5"
-          >
-            Order
           </a>
           <Dialog>
             <DialogTrigger asChild>

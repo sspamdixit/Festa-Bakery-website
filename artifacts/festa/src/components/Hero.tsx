@@ -5,7 +5,7 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
 
-const DELAY_BASE = 2.9;
+const DELAY_BASE = 2.1;
 
 export function Hero() {
   return (
