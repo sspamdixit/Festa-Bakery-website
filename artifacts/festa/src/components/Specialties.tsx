@@ -95,33 +95,38 @@ export function Specialties() {
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-serif font-extrabold text-foreground">{section.category}</h4>
                 <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-secondary">{String(idx + 1).padStart(2, "0")}</span>
               </div>
-              <div className="hidden md:grid grid-cols-[1fr_auto_auto] gap-x-6 px-4 mb-3 text-[10px] font-sans font-bold tracking-[0.2em] uppercase text-muted-foreground/70">
-                <span>Item</span>
-                <span className="w-20 text-right">½ Kg</span>
-                <span className="w-20 text-right">1 Kg</span>
-              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 md:gap-y-4">
                 {section.items.map((item) => (
                   <div
                     key={item.name}
                     className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
                   >
-                    <div className="grid grid-cols-[1fr_auto_auto] items-baseline gap-x-6">
-                      <h5 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1">
+                    <div className="grid grid-cols-[1fr_auto_auto] items-end gap-x-6">
+                      <h5 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1 self-center">
                         {item.name}
                       </h5>
-                      <span
-                        className="shrink-0 w-20 text-right text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
-                        style={{ color: "#C9527E" }}
-                      >
-                        {item.half}
-                      </span>
-                      <span
-                        className="shrink-0 w-20 text-right text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
-                        style={{ color: "#C9527E" }}
-                      >
-                        {item.kg}
-                      </span>
+                      <div className="shrink-0 w-20 text-right">
+                        <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
+                          ½ Kg
+                        </div>
+                        <span
+                          className="block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
+                          style={{ color: "#C9527E" }}
+                        >
+                          {item.half}
+                        </span>
+                      </div>
+                      <div className="shrink-0 w-20 text-right">
+                        <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
+                          1 Kg
+                        </div>
+                        <span
+                          className="block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
+                          style={{ color: "#C9527E" }}
+                        >
+                          {item.kg}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 ))}
