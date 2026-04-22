@@ -52,7 +52,7 @@ export function Hero() {
       >
         <div
           className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin]"
-          style={{ transform: "translate(-65%, -50%)" }}
+          style={{ transform: "translate(-80%, -50%)" }}
         >
           <CakeBaked />
         </div>
