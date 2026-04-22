@@ -89,13 +89,13 @@ export function TheCraft() {
             </h3>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                Festa is a home bakery in India, making small-batch cakes and fresh bakes with consistent texture, clean flavour, and careful finishing.
+                What began as a passion for small-batch excellence in Hyderabad has now officially found its home in Vadodara. Festa is a home bakery dedicated to fresh bakes with consistent texture, clean flavor, and careful finishing.
               </p>
               <p>
-                We use real butter, real cream, and real chocolate. No premixes. No shortcuts. Every order is baked fresh, packed with care, and finished to feel premium.
+                We use real butter, real cream, and real chocolate. No shortcuts. Every order is baked fresh, packed with care, and finished to feel premium.
               </p>
               <p>
-                From birthday cakes and anniversary cakes to tea-time bakes and gifting boxes, each recipe is built for flavour, softness, and dependable results.
+                From birthday celebrations and anniversaries to tea-time bakes and gifting boxes, each recipe is built for flavor, softness, and dependable results.
               </p>
             </div>
           </motion.div>
