@@ -46,9 +46,9 @@ export function Hero() {
       </div>
 
       <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
-        <div className="grid grid-cols-12 gap-4 lg:gap-10 items-center">
+        <div className="grid grid-cols-12 gap-3 lg:gap-10 items-center">
           <motion.div
-            className="order-1 col-span-12 lg:order-2 lg:col-span-5 relative h-[220px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
+            className="order-2 col-span-5 sm:col-span-5 lg:col-span-5 relative h-[200px] sm:h-[280px] md:h-[340px] lg:h-[640px] w-full"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: DELAY_BASE + 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -63,16 +63,16 @@ export function Hero() {
             <CakeBaked />
           </motion.div>
 
-          <div className="order-2 col-span-12 lg:order-1 lg:col-span-7">
+          <div className="order-1 col-span-7 sm:col-span-7 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: DELAY_BASE, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h2 className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
+              <h2 className="hidden sm:block text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
                 Boutique Bakery · Vadodara
               </h2>
-              <h1 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
+              <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
                 <span className="whitespace-nowrap">
                   <motion.span
                     className="inline-block"
@@ -110,7 +110,7 @@ export function Hero() {
                 </motion.span>
               </h1>
               <motion.p
-                className="text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-6 md:mb-12 leading-relaxed"
+                className="hidden sm:block text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-6 md:mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
@@ -164,7 +164,7 @@ export function Hero() {
                 href="https://www.google.com/search?q=Festa+home+bakery"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex group items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
+                className="hidden sm:flex group items-center gap-2 text-xs sm:text-sm font-sans font-semibold text-foreground/60 transition-colors hover:text-secondary self-start"
               >
                 <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-foreground/20 flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary group-hover:text-secondary-foreground transition-all shrink-0">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
