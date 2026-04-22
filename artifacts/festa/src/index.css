@@ -301,6 +301,75 @@
 .festa-cake-float { animation: cake-float 4.5s ease-in-out infinite; }
 .festa-spark      { animation: spark-pulse var(--dur, 2.5s) ease-in-out infinite; }
 
+/* ─── Liquid Glass surfaces ─────────────────────────────────────────────
+   A reusable, GPU-friendly frosted-glass treatment. We keep the blur
+   modest (10–14px), promote the layer with translateZ(0), and avoid
+   applying it to giant scrolling containers so it stays cheap.
+─────────────────────────────────────────────────────────────────────── */
+.liquid-glass {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.28) 45%,
+      rgba(255, 255, 255, 0.18) 100%
+    );
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 8px 24px -12px rgba(0, 0, 0, 0.18);
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+}
+.liquid-glass-soft {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.38) 0%,
+      rgba(255, 255, 255, 0.18) 50%,
+      rgba(255, 255, 255, 0.10) 100%
+    );
+  backdrop-filter: blur(10px) saturate(1.4);
+  -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 6px 20px -14px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+}
+/* Highlight sheen that sits on top of any liquid-glass surface */
+.liquid-glass::before,
+.liquid-glass-soft::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 35%
+  );
+}
+/* Disable on devices that can't handle backdrop-filter or prefer reduced motion */
+@media (prefers-reduced-transparency: reduce) {
+  .liquid-glass, .liquid-glass-soft {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: hsl(var(--card));
+  }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .liquid-glass, .liquid-glass-soft {
+    background: hsl(var(--card));
+  }
+}
+
 @layer utilities {
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;

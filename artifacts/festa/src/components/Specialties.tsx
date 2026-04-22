@@ -60,7 +60,7 @@ export function Specialties() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative cursor-default rounded-xl px-3 py-2 -mx-3 -my-2 transition-all duration-300 hover:bg-foreground/[0.03] hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgba(0,0,0,0.25)]"
+                    className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
                   >
                     <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1 mb-2">
                       <h5 className="text-base md:text-xl font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1">

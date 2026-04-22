@@ -26,7 +26,7 @@ export function CheckoutModal() {
   };
 
   return (
-    <DialogContent className="sm:max-w-xl rounded-3xl border-foreground/10 bg-background p-6 sm:p-8">
+    <DialogContent className="liquid-glass sm:max-w-xl rounded-3xl p-6 sm:p-8">
       <DialogTitle className="text-2xl sm:text-3xl font-serif font-black text-foreground">Order fresh cakes</DialogTitle>
       <DialogDescription className="mt-2 text-sm sm:text-base text-muted-foreground">
         Tell us the flavour, size, date, and message. We make custom cakes, birthday cakes, and celebration cakes to order.
@@ -41,7 +41,7 @@ export function CheckoutModal() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your name"
-            className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4"
+            className="liquid-glass-soft h-12 rounded-xl px-4"
           />
         </div>
         <div className="grid gap-2">
@@ -56,7 +56,7 @@ export function CheckoutModal() {
             onChange={(e) => setPhone(e.target.value)}
             placeholder="+91 98765 43210"
             aria-invalid={showPhoneError}
-            className={`h-12 rounded-xl border-foreground/15 bg-card/40 px-4 ${
+            className={`liquid-glass-soft h-12 rounded-xl px-4 ${
               showPhoneError ? "border-destructive focus-visible:ring-destructive" : ""
             }`}
           />
@@ -75,7 +75,7 @@ export function CheckoutModal() {
             value={details}
             onChange={(e) => setDetails(e.target.value)}
             required
-            className="min-h-[130px] rounded-xl border-foreground/15 bg-card/40 p-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium resize-none"
+            className="liquid-glass-soft min-h-[130px] rounded-xl p-4 focus-visible:ring-2 focus-visible:ring-primary text-base font-medium resize-none"
             placeholder="1 kg chocolate truffle cake for Saturday, Happy Birthday Aanya on top..."
           />
         </div>

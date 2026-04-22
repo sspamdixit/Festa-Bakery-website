@@ -139,7 +139,7 @@ export function Hero() {
 
                 <a
                   href="#menu"
-                  className="inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-7 sm:px-8 rounded-full border-2 border-foreground/25 font-sans font-bold text-base sm:text-base text-foreground transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-0.5"
+                  className="liquid-glass inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center px-7 sm:px-8 rounded-full font-sans font-bold text-base sm:text-base text-foreground transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
                 >
                   View Menu
                 </a>
