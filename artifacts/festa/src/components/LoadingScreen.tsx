@@ -33,8 +33,8 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
 
   useEffect(() => {
     preloadAssets();
-    const outTimer = setTimeout(() => setPhase("out"), 600);
-    const doneTimer = setTimeout(() => onDone(), 1000);
+    const outTimer = setTimeout(() => setPhase("out"), 2300);
+    const doneTimer = setTimeout(() => onDone(), 2700);
     return () => {
       clearTimeout(outTimer);
       clearTimeout(doneTimer);
