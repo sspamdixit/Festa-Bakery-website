@@ -25,7 +25,7 @@ export default function Home() {
           className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
           style={{ opacity: 0.18 }}
         >
-          <div className="w-[90vw] h-[90vw] max-w-[640px] max-h-[640px]">
+          <div className="w-[140vw] h-[140vw] max-w-[1100px] max-h-[1100px]">
             <CakeBaked />
           </div>
         </div>

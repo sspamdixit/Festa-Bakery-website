@@ -44,8 +44,8 @@ export function Hero() {
         />
       </div>
 
-      <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full">
-        <div className="w-full">
+      <div className="container relative z-10 px-5 mx-auto max-w-7xl w-full text-center">
+        <div className="w-full flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export function Hero() {
               </span>
             </h1>
             <motion.p
-              className="text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mb-6 md:mb-12 leading-relaxed"
+              className="text-sm sm:text-base md:text-xl text-muted-foreground font-sans font-medium max-w-xl mx-auto mb-6 md:mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
@@ -108,7 +108,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: DELAY_BASE + 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="liquid-glass-primary group relative inline-flex h-12 sm:h-14 w-full sm:w-auto items-center justify-center overflow-hidden whitespace-nowrap px-4 sm:px-8 font-bold rounded-full">
@@ -133,7 +133,7 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="mt-5 sm:mt-8 flex justify-stretch sm:justify-start"
+          className="mt-5 sm:mt-8 flex justify-stretch sm:justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: DELAY_BASE + 0.55, ease: [0.16, 1, 0.3, 1] }}
