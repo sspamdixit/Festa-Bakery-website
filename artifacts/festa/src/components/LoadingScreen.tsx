@@ -55,7 +55,7 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(227,178,60,0.28) 0%, transparent 70%)",
+                "radial-gradient(ellipse 70% 50% at 50% 60%, rgba(178,43,71,0.28) 0%, transparent 70%)",
             }}
           />
 

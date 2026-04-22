@@ -68,7 +68,7 @@ export function Specialties() {
                       </h5>
                       <span
                         className="shrink-0 text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110"
-                        style={{ color: "#E3B23C" }}
+                        style={{ color: "#B22B47" }}
                       >
                         {item.price}
                       </span>

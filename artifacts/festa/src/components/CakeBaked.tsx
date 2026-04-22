@@ -35,7 +35,7 @@ function Fallback() {
               left: s.left,
               width: s.size,
               height: s.size,
-              background: "#E3B23C",
+              background: "#B22B47",
               animationDelay: s.delay,
               animationDuration: s.duration,
             }}
@@ -45,8 +45,8 @@ function Fallback() {
           className="w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full flex items-center justify-center"
           style={{
             background:
-              "radial-gradient(circle, rgba(227,178,60,0.35) 0%, rgba(227,178,60,0.08) 55%, transparent 80%)",
-            boxShadow: "0 0 80px 20px rgba(227,178,60,0.12)",
+              "radial-gradient(circle, rgba(178,43,71,0.35) 0%, rgba(178,43,71,0.08) 55%, transparent 80%)",
+            boxShadow: "0 0 80px 20px rgba(178,43,71,0.12)",
           }}
         >
           <span

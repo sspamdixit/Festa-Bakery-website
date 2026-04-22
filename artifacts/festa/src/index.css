@@ -88,12 +88,12 @@
   --sidebar-primary-foreground: 210 40% 14%;
   --sidebar-accent: 351 41% 80%;
   --sidebar-accent-foreground: 210 40% 14%;
-  --sidebar-ring: 43 75% 52%;
+  --sidebar-ring: 348 65% 42%;
   --popover: 12 44% 96%;
   --popover-foreground: 210 40% 14%;
   --popover-border: 350 25% 78%;
-  --primary: 43 75% 52%;
-  --primary-foreground: 210 40% 14%;
+  --primary: 348 65% 42%;
+  --primary-foreground: 12 44% 98%;
   --secondary: 204 38% 44%;
   --secondary-foreground: 12 44% 96%;
   --muted: 351 30% 86%;
@@ -103,8 +103,8 @@
   --destructive: 0 70% 45%;
   --destructive-foreground: 12 44% 96%;
   --input: 350 25% 78%;
-  --ring: 43 75% 52%;
-  --chart-1: 43 75% 52%;
+  --ring: 348 65% 42%;
+  --chart-1: 348 65% 42%;
   --chart-2: 204 38% 44%;
   --chart-3: 351 41% 80%;
   --chart-4: 210 40% 14%;
@@ -187,7 +187,7 @@
   }
   /* Premium text selection */
   ::selection {
-    background-color: rgba(227, 178, 60, 0.35);
+    background-color: rgba(178, 43, 71, 0.35);
     color: hsl(var(--foreground));
   }
   /* Refined scrollbar (WebKit) */
@@ -205,13 +205,13 @@
     background-clip: padding-box;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(227, 178, 60, 0.6);
+    background: rgba(178, 43, 71, 0.6);
     background-clip: padding-box;
     border: 2px solid transparent;
   }
   /* Premium focus ring */
   :focus-visible {
-    outline: 2px solid rgba(227, 178, 60, 0.7);
+    outline: 2px solid rgba(178, 43, 71, 0.7);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -245,7 +245,7 @@
   right: 0;
   bottom: -3px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #E3B23C, transparent);
+  background: linear-gradient(90deg, transparent, #B22B47, transparent);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -256,7 +256,7 @@
 
 /* ─── Gradient sheen for headline accent words ────────────────────────── */
 .festa-shine {
-  background: linear-gradient(90deg, #E3B23C 0%, #f5d27a 35%, #E3B23C 70%);
+  background: linear-gradient(90deg, #B22B47 0%, #E0617D 35%, #B22B47 70%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -452,37 +452,18 @@ button.liquid-glass:active {
   transition-duration: 0.12s;
 }
 
-/* ─── Liquid Glass — primary tinted (gold) ───────────────────────────── */
+/* ─── Liquid Glass — primary tinted (raspberry) ──────────────────────── */
 .liquid-glass-primary {
   position: relative;
   isolation: isolate;
   color: hsl(var(--primary-foreground));
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 230, 150, 0.95) 0%,
-      hsl(43, 80%, 56%) 45%,
-      hsl(43, 78%, 48%) 100%
-    );
-  border: 1px solid rgba(255, 220, 130, 0.7);
-  box-shadow:
-    /* glossy top specular */
-    inset 0 1.5px 0.5px rgba(255, 255, 255, 0.95),
-    inset 1px 0 0 rgba(255, 255, 255, 0.35),
-    inset -1px 0 0 rgba(0, 0, 0, 0.05),
-    /* underside refraction */
-    inset 0 -3px 6px rgba(120, 70, 0, 0.22),
-    inset 0 -1px 0 rgba(255, 230, 160, 0.55),
-    /* floating shadow tinted gold */
-    0 1px 2px rgba(0, 0, 0, 0.08),
-    0 10px 22px -8px rgba(227, 178, 60, 0.55),
-    0 22px 44px -16px rgba(120, 70, 0, 0.32);
+  background: hsl(var(--primary));
+  border: 1px solid transparent;
   transform: translateZ(0);
-  will-change: transform, box-shadow;
   transition:
-    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    background 0.35s ease;
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .liquid-glass-primary::before {
   content: "";
@@ -525,7 +506,7 @@ button.liquid-glass-primary:hover {
     inset 0 -3px 6px rgba(120, 70, 0, 0.25),
     inset 0 -1px 0 rgba(255, 230, 160, 0.6),
     0 2px 4px rgba(0, 0, 0, 0.1),
-    0 18px 32px -10px rgba(227, 178, 60, 0.7),
+    0 18px 32px -10px rgba(178, 43, 71, 0.7),
     0 32px 60px -20px rgba(120, 70, 0, 0.42);
 }
 a.liquid-glass-primary:active,
@@ -559,9 +540,7 @@ button.liquid-glass-primary:active {
 a.liquid-glass,
 button.liquid-glass,
 a.liquid-glass-soft,
-button.liquid-glass-soft,
-a.liquid-glass-primary,
-button.liquid-glass-primary {
+button.liquid-glass-soft {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
   border-color: rgba(255, 255, 255, 0.5);
   font-weight: 600;
@@ -570,8 +549,13 @@ button.liquid-glass-primary {
 }
 a.liquid-glass-primary,
 button.liquid-glass-primary {
-  text-shadow: 0 1px 1px rgba(120, 70, 0, 0.28);
   font-weight: 700;
+  letter-spacing: 0.015em;
+  text-shadow: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 1px 2px rgba(75, 10, 25, 0.18),
+    0 8px 20px -8px rgba(178, 43, 71, 0.45);
 }
 a.liquid-glass::before,  button.liquid-glass::before,
 a.liquid-glass::after,   button.liquid-glass::after,
@@ -581,16 +565,31 @@ a.liquid-glass-primary::after,  button.liquid-glass-primary::after {
   content: none;
 }
 a.liquid-glass:hover,  button.liquid-glass:hover,
-a.liquid-glass-soft:hover, button.liquid-glass-soft:hover,
-a.liquid-glass-primary:hover, button.liquid-glass-primary:hover {
+a.liquid-glass-soft:hover, button.liquid-glass-soft:hover {
   transform: none;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
+a.liquid-glass-primary:hover,
+button.liquid-glass-primary:hover {
+  transform: none;
+  background: hsl(348, 65%, 47%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 2px 4px rgba(75, 10, 25, 0.22),
+    0 12px 26px -10px rgba(178, 43, 71, 0.55);
+}
 a.liquid-glass:active,  button.liquid-glass:active,
-a.liquid-glass-soft:active, button.liquid-glass-soft:active,
-a.liquid-glass-primary:active, button.liquid-glass-primary:active {
+a.liquid-glass-soft:active, button.liquid-glass-soft:active {
   transform: scale(0.985);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+a.liquid-glass-primary:active,
+button.liquid-glass-primary:active {
+  transform: scale(0.98);
+  background: hsl(348, 65%, 38%);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.15),
+    0 1px 2px rgba(75, 10, 25, 0.18);
 }
 
 @layer utilities {

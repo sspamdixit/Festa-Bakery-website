@@ -30,14 +30,14 @@ export function CustomCursor() {
       if (dotRef.current && ringRef.current) {
         if (isInteractive) {
           dotRef.current.style.transform = "translate(-50%,-50%) scale(2.5)";
-          dotRef.current.style.backgroundColor = "#E3B23C";
+          dotRef.current.style.backgroundColor = "#B22B47";
           ringRef.current.style.transform = "translate(-50%,-50%) scale(1.8)";
-          ringRef.current.style.borderColor = "rgba(227,178,60,0.5)";
+          ringRef.current.style.borderColor = "rgba(178,43,71,0.5)";
         } else {
           dotRef.current.style.transform = "translate(-50%,-50%) scale(1)";
-          dotRef.current.style.backgroundColor = "#E3B23C";
+          dotRef.current.style.backgroundColor = "#B22B47";
           ringRef.current.style.transform = "translate(-50%,-50%) scale(1)";
-          ringRef.current.style.borderColor = "rgba(227,178,60,0.35)";
+          ringRef.current.style.borderColor = "rgba(178,43,71,0.35)";
         }
       }
     };
@@ -61,7 +61,7 @@ export function CustomCursor() {
           y: springY,
           translateX: "-50%",
           translateY: "-50%",
-          backgroundColor: "#E3B23C",
+          backgroundColor: "#B22B47",
           transition: "transform 0.2s, background-color 0.2s",
         }}
       />
@@ -74,7 +74,7 @@ export function CustomCursor() {
           y: ringY,
           translateX: "-50%",
           translateY: "-50%",
-          borderColor: "rgba(227,178,60,0.35)",
+          borderColor: "rgba(178,43,71,0.35)",
           transition: "transform 0.3s, border-color 0.3s",
         }}
       />
