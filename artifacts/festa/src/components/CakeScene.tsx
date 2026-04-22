@@ -53,8 +53,8 @@ function Scene() {
     const scrollY = typeof window !== "undefined" ? window.scrollY : 0;
     const vh = typeof window !== "undefined" ? window.innerHeight : 1;
     const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
-    const distance = isMobile ? vh * 0.5 : vh;
-    const amplitude = isMobile ? Math.PI * 0.9 : Math.PI / 2;
+    const distance = isMobile ? vh * 0.4 : vh;
+    const amplitude = Math.PI / 2;
     const progress = Math.min(1, Math.max(0, scrollY / distance));
     baseYRef.current = (1 - progress) * amplitude;
 
