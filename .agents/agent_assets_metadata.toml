@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "azYOo6LbdZatyECAKFyhT"
+uri = "file://artifacts/festa/public/images/cake-texture.png"
+type = "image"
+title = "macro cake texture"
+
+[[generated]]
+id = "xlaX-V0rchi6347wezTjm"
+uri = "file://artifacts/festa/public/images/crumb-structure.png"
+type = "image"
+title = "artisanal bread crumb"
+
+[[generated]]
+id = "yCYAPznIFGXzT8LUjvCtd"
+uri = "file://artifacts/festa/public/images/hands-dough.png"
+type = "image"
+title = "hands working dough"
+
+[[generated]]
+id = "OPX-lFgUK1fT8lGrVw5Z-"
+uri = "file://artifacts/festa/public/images/tart.png"
+type = "image"
+title = "elegant fruit tart"
