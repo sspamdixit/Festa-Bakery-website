@@ -76,7 +76,7 @@ function Scene() {
 
       <ContactShadows position={[0, -1.4, 0]} opacity={0.22} scale={4} blur={2.4} far={3} color="#3d2b1f" />
 
-      <group ref={groupRef} scale={0.36}>
+      <group ref={groupRef} scale={0.42}>
         <Suspense fallback={null}>
           <Model />
         </Suspense>
