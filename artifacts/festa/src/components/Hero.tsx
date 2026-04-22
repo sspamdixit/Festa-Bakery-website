@@ -51,8 +51,8 @@ export function Hero() {
         style={{ opacity: 0.18 }}
       >
         <div
-          className="absolute top-1/2 w-[200vw] h-[200vw] max-w-[1600px] max-h-[1600px]"
-          style={{ left: "-55vw", transform: "translateY(-50%)" }}
+          className="absolute top-1/2 left-1/2 w-[170vmin] h-[170vmin]"
+          style={{ transform: "translate(-65%, -50%)" }}
         >
           <CakeBaked />
         </div>
