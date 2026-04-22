@@ -43,10 +43,19 @@ function Model() {
 
 function Scene() {
   const groupRef = useRef<THREE.Group>(null);
+  const baseYRef = useRef(0);
 
-  useFrame(() => {
+  useFrame((state) => {
     if (!groupRef.current) return;
-    groupRef.current.rotation.y += 0.003;
+    // Slow auto-spin baseline.
+    baseYRef.current += 0.003;
+    // Mouse-driven tilt — small amplitude so neither cake nor shadow ever clip
+    // out of the canvas. state.mouse is normalized to [-1, 1] within the canvas.
+    const targetX = state.mouse.y * 0.12;
+    const targetYOffset = state.mouse.x * 0.18;
+    groupRef.current.rotation.x += (targetX - groupRef.current.rotation.x) * 0.06;
+    groupRef.current.rotation.y +=
+      (baseYRef.current + targetYOffset - groupRef.current.rotation.y) * 0.08;
   });
 
   return (
