@@ -6,8 +6,18 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from "lucide-react";
 
+const WHATSAPP_NUMBER = "919963163227";
+
 export function CheckoutModal() {
+  const [name, setName] = useState("");
   const [details, setDetails] = useState("");
+
+  const handleContinue = () => {
+    if (!details.trim()) return;
+    const message = `Hi Festa!${name.trim() ? ` I'm ${name.trim()}.` : ""}\n\nI'd like to place an order:\n${details.trim()}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <DialogContent className="sm:max-w-xl rounded-3xl border-foreground/10 bg-background p-6 sm:p-8">
@@ -20,7 +30,13 @@ export function CheckoutModal() {
           <Label htmlFor="name" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
             Your Name
           </Label>
-          <Input id="name" placeholder="Your name" className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4" />
+          <Input
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+            className="h-12 rounded-xl border-foreground/15 bg-card/40 px-4"
+          />
         </div>
         <div className="grid gap-2">
           <Label htmlFor="details" className="text-xs font-bold uppercase tracking-[0.18em] text-secondary">
@@ -38,8 +54,10 @@ export function CheckoutModal() {
       </div>
 
       <Button
-        type="submit"
-        className="group mt-6 w-full h-14 bg-primary text-primary-foreground font-sans font-bold tracking-wide rounded-full text-base hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] transition-all"
+        type="button"
+        onClick={handleContinue}
+        disabled={!details.trim()}
+        className="group mt-6 w-full h-14 bg-primary text-primary-foreground font-sans font-bold tracking-wide rounded-full text-base hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
       >
         Continue on WhatsApp
         <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
