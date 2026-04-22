@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function TheCraft() {
   return (
-    <section className="py-16 md:py-28 lg:py-36 overflow-hidden" style={{ backgroundColor: "hsl(var(--card))" }}>
+    <section className="py-16 md:py-28 lg:py-36 overflow-hidden relative" style={{ backgroundColor: "hsl(var(--card))" }}>
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
@@ -85,6 +85,11 @@ export function TheCraft() {
           </motion.div>
         </div>
       </div>
+      {/* bottom gradient bleed */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }}
+      />
     </section>
   );
 }

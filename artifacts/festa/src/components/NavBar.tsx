@@ -1,15 +1,29 @@
+import { useState, useEffect } from "react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CheckoutModal } from "./CheckoutModal";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 export function NavBar() {
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    return scrollY.on("change", (y) => setScrolled(y > 40));
+  }, [scrollY]);
+
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center border-b border-foreground/10 backdrop-blur-md"
-      style={{ backgroundColor: "hsla(var(--background), 0.85)" }}
-      initial={{ opacity: 0, y: -12 }}
+      className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center transition-all duration-500"
+      style={{
+        borderBottom: scrolled ? "1px solid rgba(0,0,0,0.07)" : "1px solid transparent",
+        backdropFilter: scrolled ? "blur(16px) saturate(1.5)" : "blur(0px)",
+        backgroundColor: scrolled
+          ? "hsla(var(--background), 0.88)"
+          : "transparent",
+      }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, delay: 2.8, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="container px-5 mx-auto max-w-7xl flex items-center justify-between">
         <a
