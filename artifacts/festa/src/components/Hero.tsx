@@ -72,8 +72,8 @@ export function Hero() {
               <h2 className="hidden sm:block text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
                 Boutique Bakery · Vadodara
               </h2>
-              <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
-                <span className="whitespace-nowrap">
+              <h1 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
+                <span>
                   <motion.span
                     className="inline-block"
                     initial={{ opacity: 0, y: 30 }}
@@ -147,17 +147,17 @@ export function Hero() {
                 </a>
               </div>
 
-              <div className="flex flex-row items-center gap-3">
+              <div className="flex flex-row items-stretch gap-3">
                 <div
                   role="img"
                   aria-label="100% pure vegetarian"
-                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/5 px-3 py-1.5"
+                  className="flex-1 sm:flex-none inline-flex h-10 items-center justify-center gap-2 rounded-full border border-[#0a8a3a]/30 bg-[#0a8a3a]/[0.06] px-4"
                 >
-                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
-                    <span className="block w-1.5 h-1.5 rounded-full bg-[#0a8a3a]" />
+                  <span className="inline-flex items-center justify-center w-3.5 h-3.5 rounded-[3px] border-2 border-[#0a8a3a] bg-white shrink-0">
+                    <span className="block w-1 h-1 rounded-full bg-[#0a8a3a]" />
                   </span>
-                  <span className="text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-[#0a8a3a] whitespace-nowrap">
-                    100% Pure Veg
+                  <span className="text-[11px] font-sans font-bold tracking-[0.14em] uppercase text-[#0a8a3a] whitespace-nowrap">
+                    Pure Veg
                   </span>
                 </div>
 
@@ -165,7 +165,7 @@ export function Hero() {
                   href="https://www.google.com/search?q=Festa+home+bakery"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex-1 sm:flex-none inline-flex items-center justify-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.03] px-3 py-1.5 text-[11px] font-sans font-bold tracking-[0.18em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
+                  className="group flex-1 sm:flex-none inline-flex h-10 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.04] px-4 text-[11px] font-sans font-bold tracking-[0.14em] uppercase text-foreground/70 transition-colors hover:border-secondary/50 hover:text-secondary"
                 >
                   <MapPin className="w-3.5 h-3.5 shrink-0" />
                   <span className="whitespace-nowrap">Bhayli, Vadodara</span>
