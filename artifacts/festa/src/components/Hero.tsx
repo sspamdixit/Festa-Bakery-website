@@ -126,7 +126,7 @@ export function Hero() {
               <div className="flex flex-row gap-3">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden bg-primary px-7 sm:px-8 font-bold text-primary-foreground rounded-full transition-all duration-300 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] hover:-translate-y-0.5">
+                    <button className="liquid-glass-primary group relative inline-flex h-14 sm:h-14 flex-1 sm:flex-none sm:w-auto items-center justify-center overflow-hidden px-7 sm:px-8 font-bold rounded-full">
                       <span className="relative z-10 flex items-center gap-2 font-sans tracking-wide text-base sm:text-base">
                         Order Now
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

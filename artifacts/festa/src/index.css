@@ -322,48 +322,71 @@
   background-size: 240px 240px;
 }
 
-/* ─── Liquid Glass surfaces ─────────────────────────────────────────────
-   A reusable, GPU-friendly frosted-glass treatment. We keep the blur
-   modest (10–14px), promote the layer with translateZ(0), and avoid
-   applying it to giant scrolling containers so it stays cheap.
+/* ─── Liquid Glass surfaces (Apple-style, dimensional) ─────────────────
+   A reusable, GPU-friendly frosted-glass treatment with layered
+   specular highlights, refraction tint, and a soft floating shadow.
+   Keep blur modest (10–18px), promote layer with translateZ(0).
 ─────────────────────────────────────────────────────────────────────── */
 .liquid-glass {
   position: relative;
+  isolation: isolate;
   background:
+    /* refraction gradient — gives the body a curved feel */
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.55) 0%,
-      rgba(255, 255, 255, 0.28) 45%,
-      rgba(255, 255, 255, 0.18) 100%
+      rgba(255, 255, 255, 0.62) 0%,
+      rgba(255, 255, 255, 0.28) 38%,
+      rgba(255, 255, 255, 0.18) 70%,
+      rgba(255, 255, 255, 0.34) 100%
     );
-  backdrop-filter: blur(14px) saturate(1.6);
-  -webkit-backdrop-filter: blur(14px) saturate(1.6);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(1.8) brightness(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(1.8) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.04),
-    0 8px 24px -12px rgba(0, 0, 0, 0.18);
+    /* top inner specular */
+    inset 0 1.5px 0.5px rgba(255, 255, 255, 0.95),
+    /* side inner highlights */
+    inset 1px 0 0 rgba(255, 255, 255, 0.35),
+    inset -1px 0 0 rgba(255, 255, 255, 0.25),
+    /* bottom inner shadow giving depth */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.4),
+    /* floating drop shadows (close + ambient) */
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 18px -6px rgba(0, 0, 0, 0.18),
+    0 22px 40px -18px rgba(0, 0, 0, 0.22);
   transform: translateZ(0);
-  will-change: backdrop-filter;
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .liquid-glass-soft {
   position: relative;
+  isolation: isolate;
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.38) 0%,
+      rgba(255, 255, 255, 0.42) 0%,
       rgba(255, 255, 255, 0.18) 50%,
-      rgba(255, 255, 255, 0.10) 100%
+      rgba(255, 255, 255, 0.22) 100%
     );
-  backdrop-filter: blur(10px) saturate(1.4);
-  -webkit-backdrop-filter: blur(10px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px) saturate(1.5) brightness(1.03);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5) brightness(1.03);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    0 6px 20px -14px rgba(0, 0, 0, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 10px 24px -14px rgba(0, 0, 0, 0.22);
   transform: translateZ(0);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* Highlight sheen that sits on top of any liquid-glass surface */
+/* Top specular sheen — a glossy "wet" highlight band that suggests a
+   curved glass surface with a light source above. */
 .liquid-glass::before,
 .liquid-glass-soft::before {
   content: "";
@@ -371,11 +394,148 @@
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.35) 0%,
-    rgba(255, 255, 255, 0) 35%
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.18) 18%,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  z-index: 1;
+}
+/* Bottom rim light — a faint inner glow at the lower edge, like light
+   refracting through the underside of a glass dome. */
+.liquid-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      120% 60% at 50% 110%,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0) 55%
+    );
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+/* Make sure interactive children sit above the highlight overlays. */
+.liquid-glass > *,
+.liquid-glass-soft > * {
+  position: relative;
+  z-index: 2;
+}
+/* Apple-style press / hover for buttons & links using liquid-glass. */
+a.liquid-glass:hover,
+button.liquid-glass:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow:
+    inset 0 1.5px 0.5px rgba(255, 255, 255, 1),
+    inset 1px 0 0 rgba(255, 255, 255, 0.4),
+    inset -1px 0 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 14px 28px -8px rgba(0, 0, 0, 0.22),
+    0 30px 50px -18px rgba(0, 0, 0, 0.28);
+}
+a.liquid-glass:active,
+button.liquid-glass:active {
+  transform: translateY(0) translateZ(0) scale(0.985);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  transition-duration: 0.12s;
+}
+
+/* ─── Liquid Glass — primary tinted (gold) ───────────────────────────── */
+.liquid-glass-primary {
+  position: relative;
+  isolation: isolate;
+  color: hsl(var(--primary-foreground));
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 230, 150, 0.95) 0%,
+      hsl(43, 80%, 56%) 45%,
+      hsl(43, 78%, 48%) 100%
+    );
+  border: 1px solid rgba(255, 220, 130, 0.7);
+  box-shadow:
+    /* glossy top specular */
+    inset 0 1.5px 0.5px rgba(255, 255, 255, 0.95),
+    inset 1px 0 0 rgba(255, 255, 255, 0.35),
+    inset -1px 0 0 rgba(0, 0, 0, 0.05),
+    /* underside refraction */
+    inset 0 -3px 6px rgba(120, 70, 0, 0.22),
+    inset 0 -1px 0 rgba(255, 230, 160, 0.55),
+    /* floating shadow tinted gold */
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 10px 22px -8px rgba(227, 178, 60, 0.55),
+    0 22px 44px -16px rgba(120, 70, 0, 0.32);
+  transform: translateZ(0);
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.35s ease;
+}
+.liquid-glass-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.12) 22%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  z-index: 1;
+}
+.liquid-glass-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 60% at 50% 110%,
+    rgba(255, 240, 200, 0.55) 0%,
+    rgba(255, 240, 200, 0) 55%
   );
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  z-index: 1;
+}
+.liquid-glass-primary > * { position: relative; z-index: 2; }
+a.liquid-glass-primary:hover,
+button.liquid-glass-primary:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow:
+    inset 0 1.5px 0.5px rgba(255, 255, 255, 1),
+    inset 1px 0 0 rgba(255, 255, 255, 0.45),
+    inset -1px 0 0 rgba(0, 0, 0, 0.05),
+    inset 0 -3px 6px rgba(120, 70, 0, 0.25),
+    inset 0 -1px 0 rgba(255, 230, 160, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 18px 32px -10px rgba(227, 178, 60, 0.7),
+    0 32px 60px -20px rgba(120, 70, 0, 0.42);
+}
+a.liquid-glass-primary:active,
+button.liquid-glass-primary:active {
+  transform: translateY(0) translateZ(0) scale(0.985);
+  box-shadow:
+    inset 0 3px 6px rgba(120, 70, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+  transition-duration: 0.12s;
 }
 /* Disable on devices that can't handle backdrop-filter or prefer reduced motion */
 @media (prefers-reduced-transparency: reduce) {

@@ -38,7 +38,7 @@ export function NavBar() {
           </a>
           <Dialog>
             <DialogTrigger asChild>
-              <button className="inline-flex h-9 items-center justify-center bg-primary px-5 rounded-full text-sm font-sans font-bold text-primary-foreground transition-all hover:shadow-[0_8px_24px_-6px_rgba(227,178,60,0.6)] hover:-translate-y-px">
+              <button className="liquid-glass-primary inline-flex h-10 items-center justify-center px-5 rounded-full text-sm font-sans font-bold">
                 Order Now
               </button>
             </DialogTrigger>

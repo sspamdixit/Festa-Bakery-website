@@ -85,7 +85,7 @@ export function CheckoutModal() {
         type="button"
         onClick={handleContinue}
         disabled={!canSubmit}
-        className="group mt-6 w-full h-14 bg-primary text-primary-foreground font-sans font-bold tracking-wide rounded-full text-base hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(227,178,60,0.7)] transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+        className="liquid-glass-primary group mt-6 w-full h-14 font-sans font-bold tracking-wide rounded-full text-base disabled:opacity-50"
       >
         Continue on WhatsApp
         <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
