@@ -47,10 +47,13 @@ export function Hero() {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+        className="pointer-events-none absolute inset-0 z-0 overflow-visible"
         style={{ opacity: 0.18 }}
       >
-        <div className="w-[140vw] h-[140vw] max-w-[1100px] max-h-[1100px]">
+        <div
+          className="absolute top-1/2 w-[200vw] h-[200vw] max-w-[1600px] max-h-[1600px]"
+          style={{ left: "-55vw", transform: "translateY(-50%)" }}
+        >
           <CakeBaked />
         </div>
       </div>
