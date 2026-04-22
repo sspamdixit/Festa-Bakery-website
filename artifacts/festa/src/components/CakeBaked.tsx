@@ -1,6 +1,7 @@
-import { Suspense, useEffect, useRef, useState, lazy } from "react";
+import { Suspense, useEffect, useState, lazy } from "react";
 
-const CakeScene = lazy(() => import("./CakeScene"));
+const cakeScenePromise = import("./CakeScene");
+const CakeScene = lazy(() => cakeScenePromise);
 
 function detectWebGL(): boolean {
   try {
@@ -63,40 +64,19 @@ function Fallback() {
 // ─── Export ───────────────────────────────────────────────────────────────────
 export function CakeBaked() {
   const [hasWebGL] = useState(() => detectWebGL());
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  // Mount on next tick so the very first paint isn't blocked by the 3D chunk,
+  // but the chunk download still kicks off immediately on module load above.
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     if (!hasWebGL) return;
-    const node = containerRef.current;
-    if (!node) return;
-
-    // If IntersectionObserver isn't supported, just mount immediately.
-    if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observer.disconnect();
-            break;
-          }
-        }
-      },
-      { rootMargin: "200px" },
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
+    const id = window.requestAnimationFrame(() => setReady(true));
+    return () => window.cancelAnimationFrame(id);
   }, [hasWebGL]);
 
   return (
-    <div ref={containerRef} className="w-full h-full">
-      {hasWebGL && inView ? (
+    <div className="w-full h-full">
+      {hasWebGL && ready ? (
         <Suspense fallback={<Fallback />}>
           <CakeScene />
         </Suspense>
