@@ -19,7 +19,7 @@ export function Footer() {
               />
             </p>
             <p className="text-foreground/70 font-sans font-medium text-sm md:text-base max-w-sm leading-relaxed">
-              Eggless home bakery in Bhayli, Vadodara. Birthday cakes, fruit cakes, brownies and tea cakes — baked fresh on order day.
+              Eggless home bakery in Bhayli, Vadodara. Birthday cakes, fresh fruit cakes, brownies and tea cakes, baked fresh on the day of your order.
             </p>
           </div>
 

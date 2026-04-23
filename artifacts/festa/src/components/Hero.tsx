@@ -78,7 +78,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: DELAY_BASE + 0.35, ease: [0.16, 1, 0.3, 1] }}
             >
-              Birthday cakes, fruit cakes, brownies and tea cakes — baked to order with real butter, real cream and real chocolate.
+              Birthday cakes, fresh fruit cakes, brownies and tea cakes baked to order in Bhayli, Vadodara. Real butter, real cream, real chocolate.
             </motion.p>
           </motion.div>
 

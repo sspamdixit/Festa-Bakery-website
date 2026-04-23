@@ -88,13 +88,13 @@ export function TheCraft() {
             </h2>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                Festa started in Hyderabad as a small-batch project by <span className="font-bold text-foreground">Smriti</span> and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.
+                Festa began in Hyderabad as a tiny home kitchen run by <span className="font-bold text-foreground">Smriti Dixit</span>, and today bakes out of Bhayli, Vadodara. Every eggless cake is mixed, baked and finished by hand, in small batches.
               </p>
               <p>
-                Real butter, real cream, real chocolate. No compromises. Every cake is baked fresh on order day by Smriti and packed to travel.
+                We use real butter, real cream and real Belgian chocolate. No premixes, no shortcuts. Each cake is baked fresh on the day of your order and packed carefully so it travels well across the city.
               </p>
               <p>
-                Birthdays, anniversaries, baby showers, tea-time bakes and gifting boxes — built for flavour, softness and dependable results.
+                Birthdays, anniversaries, baby showers, daily tea cakes and gifting boxes for festivals. Whatever the occasion in Vadodara, we bake it the way we would for our own family.
               </p>
             </div>
           </motion.div>

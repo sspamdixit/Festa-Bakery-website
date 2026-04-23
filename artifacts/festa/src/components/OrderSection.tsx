@@ -20,7 +20,7 @@ export function OrderSection() {
             Order your cake on WhatsApp.
           </h2>
           <p className="text-base md:text-xl text-foreground/75 font-sans font-medium mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">
-            48 hours notice for celebration cakes, 24 hours for tea cakes and brownies. Pickup from Bhayli, Vadodara.
+            Send us the flavour, weight, message on top and pickup date. We need 48 hours for celebration cakes and 24 hours for tea cakes and brownies. Pickup from our Bhayli kitchen, with delivery available across Vadodara.
           </p>
 
           <Dialog>
@@ -44,7 +44,7 @@ export function OrderSection() {
             className="mt-8 md:mt-10 inline-flex items-center gap-2 text-sm md:text-base font-sans font-semibold text-foreground/75 hover:text-secondary transition-colors"
           >
             <MapPin className="w-4 h-4 shrink-0" />
-            <span>Pickup address: Bhayli, Vadodara — Gujarat 391410</span>
+            <span>Pickup address: Bhayli, Vadodara, Gujarat 391410</span>
           </a>
         </motion.div>
       </div>

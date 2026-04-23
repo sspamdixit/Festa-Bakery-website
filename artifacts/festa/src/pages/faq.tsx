@@ -45,7 +45,7 @@ const FAQS = [
 
 export default function Faq() {
   useEffect(() => {
-    document.title = "FAQ — Festa Eggless Home Bakery, Bhayli, Vadodara";
+    document.title = "FAQ | Festa Eggless Home Bakery, Bhayli, Vadodara";
   }, []);
 
   const jsonLd = {
@@ -64,7 +64,7 @@ export default function Faq() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="text-4xl font-bold mb-2">Festa — Frequently Asked Questions</h1>
+      <h1 className="text-4xl font-bold mb-2">Festa Eggless Bakery: Frequently Asked Questions</h1>
       <p className="text-sm opacity-70 mb-10">
         Eggless home bakery in Bhayli, Vadodara. WhatsApp +91 99631 63227 to order.
       </p>

@@ -62,7 +62,7 @@ export function CheckoutModal() {
           />
           {showPhoneError && (
             <p className="text-xs font-medium text-destructive">
-              Please enter a valid phone number (10–15 digits).
+              Please enter a valid phone number (10 to 15 digits).
             </p>
           )}
         </div>

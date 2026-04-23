@@ -27,7 +27,7 @@ export default function NotFound() {
         </h2>
 
         <p className="text-base md:text-lg text-muted-foreground font-sans font-medium max-w-md mx-auto mb-10 leading-relaxed">
-          The page you're looking for has been eaten, moved, or never baked. Head back to the menu — there's plenty more to taste.
+          The page you're looking for has been eaten, moved, or never baked. Head back to the menu, there's plenty more to taste.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
