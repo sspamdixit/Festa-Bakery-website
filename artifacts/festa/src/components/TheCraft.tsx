@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import smritiPortrait from "@assets/image_1776929982960.png";
 
 export function TheCraft() {
   return (
@@ -6,15 +7,49 @@ export function TheCraft() {
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
-            <div className="grid grid-cols-2 gap-3 md:gap-6 relative z-10">
+            <div className="grid grid-cols-5 gap-3 md:gap-6 relative z-10 items-stretch">
               <motion.div
-                className="space-y-3 md:space-y-6 mt-10 md:mt-12"
+                className="col-span-3"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl bg-gradient-to-br from-[#f9d7e3] via-[#fbe6d1] to-[#f4c1d4]">
+                  <div className="absolute inset-0 glow-pink-radial-soft opacity-70 pointer-events-none" />
+                  <div className="absolute -bottom-2 -right-2 w-40 h-40 md:w-60 md:h-60 rounded-full bg-white/30 blur-3xl pointer-events-none" />
+                  <img
+                    src={smritiPortrait}
+                    alt="Smriti, founder of Festa, holding a hand-decorated celebration cake"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative z-10 object-contain object-bottom w-full h-full drop-shadow-2xl hover:scale-[1.03] transition-transform duration-1000"
+                  />
+                  <div className="absolute top-4 left-4 md:top-5 md:left-5 z-20">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white/85 backdrop-blur px-3 py-1 md:px-4 md:py-1.5 text-[10px] md:text-xs font-sans font-bold tracking-[0.2em] uppercase text-foreground shadow-md">
+                      <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                      Meet Smriti
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 md:bottom-5 md:left-5 md:right-5 z-20">
+                    <p className="font-serif text-lg md:text-2xl font-black leading-tight text-foreground">
+                      Smriti
+                    </p>
+                    <p className="font-sans text-[11px] md:text-xs tracking-[0.18em] uppercase text-foreground/70 font-bold">
+                      Founder &amp; Head Baker
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="col-span-2 flex flex-col gap-3 md:gap-6"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="relative flex-1 min-h-[160px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/celebration-cake.webp"
                     alt="Celebration cake with gold leaf"
@@ -25,27 +60,7 @@ export function TheCraft() {
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
-                  <img
-                    src="/images/everyday-bake.webp"
-                    alt="Everyday bakes like tea cake, milk buns, and cookies"
-                    loading="lazy"
-                    decoding="async"
-                    width="600"
-                    height="600"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="space-y-3 md:space-y-6"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <div className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative flex-1 min-h-[160px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src="/images/chocolate-truffle.webp"
                     alt="Chocolate truffle cake slice"
@@ -53,17 +68,6 @@ export function TheCraft() {
                     decoding="async"
                     width="600"
                     height="600"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
-                  />
-                </div>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
-                  <img
-                    src="/images/baker-hands.webp"
-                    alt="Baker piping buttercream rosettes"
-                    loading="lazy"
-                    decoding="async"
-                    width="600"
-                    height="800"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -86,10 +90,10 @@ export function TheCraft() {
             </h2>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
-                Festa started in Hyderabad as a small-batch project and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.
+                Festa started in Hyderabad as a small-batch project by <span className="font-bold text-foreground">Smriti</span> and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.
               </p>
               <p>
-                Real butter, real cream, real chocolate. No compromises. Every cake is baked fresh on order day and packed to travel.
+                Real butter, real cream, real chocolate. No compromises. Every cake is baked fresh on order day by Smriti and packed to travel.
               </p>
               <p>
                 Birthdays, anniversaries, baby showers, tea-time bakes and gifting boxes — built for flavour, softness and dependable results.
