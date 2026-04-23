@@ -91,7 +91,7 @@ export function TheCraft() {
                 Festa began in Hyderabad as a tiny home kitchen run by <span className="font-bold text-foreground">Smriti Dixit</span>, and today bakes out of Bhayli, Vadodara. Every eggless cake is mixed, baked and finished by hand, in small batches.
               </p>
               <p>
-                We use real butter, real cream and real Belgian chocolate. No premixes, no shortcuts. Each cake is baked fresh on the day of your order and packed carefully so it travels well across the city.
+                We use real butter, real cream and real Belgian chocolate, with no shortcuts in the recipe. Each cake is baked fresh on the day of your order and packed carefully so it travels well across the city.
               </p>
               <p>
                 Birthdays, anniversaries, baby showers, daily tea cakes and gifting boxes for festivals. Whatever the occasion in Vadodara, we bake it the way we would for our own family.
