@@ -40,7 +40,7 @@ export function NavBar() {
             src="/festa-cream.png"
             alt=""
             aria-hidden
-            className="absolute inset-0 h-full w-auto opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none"
+            className="festa-cream-swap opacity-0 transition-opacity duration-200 group-hover:opacity-100"
           />
         </a>
 

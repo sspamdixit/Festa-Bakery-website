@@ -661,6 +661,16 @@ button.liquid-glass-primary:active {
 .fade-to-card        { background: linear-gradient(to bottom, transparent, hsl(var(--card))); }
 .fade-to-background  { background: linear-gradient(to bottom, transparent, hsl(var(--background))); }
 
+.festa-cream-swap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 1.55em;
+  width: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .glow-pink-radial-soft {
   background: radial-gradient(circle, rgba(201, 82, 126, 0.25) 0%, rgba(201, 82, 126, 0) 60%);
   filter: blur(80px);
