@@ -80,10 +80,10 @@ export function TheCraft() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Craft</h2>
-            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[0.95] text-foreground mb-6 md:mb-8">
+            <p className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">The Craft</p>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black leading-[0.95] text-foreground mb-6 md:mb-8">
               From Hyderabad to Vadodara.
-            </h3>
+            </h2>
             <div className="space-y-4 md:space-y-5 text-foreground/80 font-sans font-medium text-base md:text-lg leading-relaxed">
               <p>
                 Festa started in Hyderabad as a small-batch project and now bakes out of Bhayli, Vadodara. Eggless cakes and bakes with consistent texture, clean flavour and careful finishing.

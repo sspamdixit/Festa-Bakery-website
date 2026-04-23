@@ -15,10 +15,10 @@ export function OrderSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Place an Order</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-black text-foreground mb-6 md:mb-8 leading-[0.95]">
+          <p className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Place an Order</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-black text-foreground mb-6 md:mb-8 leading-[0.95]">
             Order your cake on WhatsApp.
-          </h3>
+          </h2>
           <p className="text-base md:text-xl text-foreground/75 font-sans font-medium mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">
             48 hours notice for celebration cakes, 24 hours for tea cakes and brownies. Pickup from Bhayli, Vadodara.
           </p>

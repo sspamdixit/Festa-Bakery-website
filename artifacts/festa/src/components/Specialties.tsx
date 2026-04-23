@@ -78,8 +78,8 @@ export function Specialties() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Menu & Pricing</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Eggless cakes, baked to order.</h3>
+          <p className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Menu & Pricing</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Eggless cakes, baked to order.</h2>
         </motion.div>
 
         <div className="space-y-12 md:space-y-20">
@@ -92,7 +92,7 @@ export function Specialties() {
               transition={{ duration: 0.7, delay: idx * 0.1 }}
             >
               <div className="flex items-baseline justify-between border-b-2 border-foreground/15 pb-4 mb-7 md:mb-10">
-                <h4 className="text-xl sm:text-2xl md:text-3xl font-serif font-extrabold text-foreground">{section.category}</h4>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-extrabold text-foreground">{section.category}</h3>
                 <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-secondary">{String(idx + 1).padStart(2, "0")}</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 md:gap-y-4">
@@ -102,9 +102,9 @@ export function Specialties() {
                     className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
                   >
                     <div className="grid grid-cols-[1fr_auto_auto] items-end gap-x-6">
-                      <h5 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1 self-center">
+                      <h4 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1 self-center">
                         {item.name}
-                      </h5>
+                      </h4>
                       <div className="shrink-0 w-20 text-right">
                         <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
                           ½ Kg

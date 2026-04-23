@@ -31,9 +31,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: DELAY_BASE, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h2 className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
+            <p className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-3 md:mb-6">
               Eggless Home Bakery · Bhayli, Vadodara
-            </h2>
+            </p>
             <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl lg:text-8xl font-serif font-black leading-[0.95] text-foreground mb-4 md:mb-8">
               <span className="block whitespace-nowrap">
                 <motion.span
