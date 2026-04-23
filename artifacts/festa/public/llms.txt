@@ -1,0 +1,30 @@
+# Festa
+
+> Festa is an eggless home bakery in Bhayli, Vadodara, Gujarat, India. We bake fresh birthday cakes, fruit cakes, brownies and tea cakes to order. Orders are placed over WhatsApp at +91 99631 63227.
+
+## Key facts
+
+- Business: Festa (home bakery)
+- Location: Bhayli, Vadodara, Gujarat 391410, India
+- Specialty: 100% eggless cakes, brownies, tea cakes
+- Order channel: WhatsApp +91 99631 63227
+- Lead time: 48 hours minimum; 3–5 days for custom / theme cakes
+- Delivery: Pickup from Bhayli preferred; third-party delivery within Vadodara at customer cost
+- Pricing: Standard cakes from ₹650 / 500g; quote on WhatsApp
+- Diets: Eggless always; sugar-free on request; vegan for select flavours with notice
+
+## Flavours
+
+Chocolate truffle, fresh fruit, red velvet, pineapple, butterscotch, coffee, vanilla, seasonal fruit cakes, brownies, tea cakes.
+
+## Pages
+
+- [Home](/): Brand story, specialties, how to order
+- [FAQ](/faq): Full list of frequently asked questions in plain text
+- [Sitemap](/sitemap.xml): Machine-readable list of pages
+- [Full content (markdown)](/llms-full.txt): All key text content for LLM ingestion
+
+## Contact
+
+WhatsApp: +91 99631 63227
+City: Vadodara, Gujarat, India
