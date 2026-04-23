@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import smritiPortrait from "@assets/image_1776929982960.png";
+import pinkButterflyCake from "@assets/WhatsApp_Image_2026-04-23_at_1.00.42_PM_1776930969804.jpeg";
 
 export function TheCraft() {
   return (
@@ -47,8 +48,8 @@ export function TheCraft() {
               >
                 <div className="relative flex-1 min-h-[160px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/celebration-cake.webp"
-                    alt="Celebration cake with gold leaf"
+                    src={pinkButterflyCake}
+                    alt="Pink buttercream birthday cake with butterfly and gold accents"
                     loading="lazy"
                     decoding="async"
                     width="600"
