@@ -10,7 +10,7 @@ export function FunCake() {
           <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[#ff6b6b]/20 blur-3xl pointer-events-none" />
 
           <motion.div
-            className="relative z-10 px-4 py-5 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:py-12 order-1"
+            className="relative z-10 px-4 py-5 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:py-12 col-start-1 row-start-1"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -32,7 +32,7 @@ export function FunCake() {
           </motion.div>
 
           <motion.div
-            className="relative z-10 order-2 flex items-end justify-center md:justify-end pt-2 md:pt-0"
+            className="relative z-10 col-start-2 row-start-1 flex items-end justify-center md:justify-end pt-2 md:pt-0"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
