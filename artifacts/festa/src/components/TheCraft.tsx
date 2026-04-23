@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import smritiPortrait from "@assets/image_1776929982960.png";
 import pinkButterflyCake from "@assets/WhatsApp_Image_2026-04-23_at_1.00.42_PM_1776930969804.jpeg";
+import pinkRosetteButterflyCake from "@assets/WhatsApp_Image_2026-04-23_at_1.00.18_PM_1776931347734.jpeg";
 
 export function TheCraft() {
   return (
@@ -46,7 +47,7 @@ export function TheCraft() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative flex-1 min-h-[160px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative flex-[2] min-h-[200px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
                     src={pinkButterflyCake}
                     alt="Pink buttercream birthday cake with butterfly and gold accents"
@@ -57,10 +58,10 @@ export function TheCraft() {
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
-                <div className="relative flex-1 min-h-[160px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative flex-[1] min-h-[120px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
                   <img
-                    src="/images/chocolate-truffle.webp"
-                    alt="Chocolate truffle cake slice"
+                    src={pinkRosetteButterflyCake}
+                    alt="Pink rosette cake decorated with butterflies"
                     loading="lazy"
                     decoding="async"
                     width="600"
