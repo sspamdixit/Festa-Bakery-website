@@ -26,9 +26,22 @@ export function NavBar() {
       <div className="container px-5 mx-auto max-w-7xl flex items-center justify-between">
         <a
           href="/"
-          className="text-2xl font-serif font-black text-foreground tracking-tight leading-none"
+          className="group relative inline-block text-2xl font-serif font-black text-foreground tracking-tight leading-none"
+          aria-label="Festa"
         >
-          Festa.
+          <span className="invisible">Festa.</span>
+          <span
+            aria-hidden
+            className="absolute inset-0 flex items-center transition-opacity duration-200 group-hover:opacity-0"
+          >
+            Festa.
+          </span>
+          <img
+            src="/festa-cream.png"
+            alt=""
+            aria-hidden
+            className="absolute inset-0 h-full w-auto opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none"
+          />
         </a>
 
         <nav className="flex items-center gap-3 sm:gap-4">

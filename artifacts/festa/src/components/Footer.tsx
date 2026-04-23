@@ -8,7 +8,16 @@ export function Footer() {
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-serif font-black text-foreground mb-3 md:mb-4">Festa.</h2>
+            <h2 className="group relative inline-block text-4xl md:text-5xl font-serif font-black text-foreground leading-none mb-3 md:mb-4">
+              <span className="invisible">Festa.</span>
+              <span aria-hidden className="absolute inset-0 flex items-center transition-opacity duration-200 group-hover:opacity-0">Festa.</span>
+              <img
+                src="/festa-cream.png"
+                alt=""
+                aria-hidden
+                className="absolute inset-0 h-full w-auto opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none"
+              />
+            </h2>
             <p className="text-foreground/70 font-sans font-medium text-sm md:text-base max-w-sm leading-relaxed">
               Eggless home bakery in Bhayli, Vadodara. Birthday cakes, fruit cakes, brownies and tea cakes — baked fresh on order day.
             </p>
