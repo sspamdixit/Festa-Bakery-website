@@ -33,7 +33,7 @@ args = "PORT=19174 pnpm --filter @workspace/festa run dev"
 waitForPort = 19174
 
 [agent]
-stack = "PNPM_WORKSPACE"
+stack = "BEST_EFFORT_FALLBACK"
 expertMode = true
 
 [postMerge]
