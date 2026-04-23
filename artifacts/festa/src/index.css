@@ -665,8 +665,10 @@ button.liquid-glass-primary:active {
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 1.55em;
+  height: 1.15em;
   width: auto;
+  max-width: none;
+  object-fit: contain;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
