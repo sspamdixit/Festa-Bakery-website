@@ -14,12 +14,12 @@ export default function NotFound() {
       </div>
 
       <div className="relative z-10 max-w-xl w-full text-center">
-        <p className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-5">
+        <p className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.3em] text-primary uppercase mb-5">
           Error 404
         </p>
 
         <h1 className="text-[5rem] sm:text-[7rem] md:text-[9rem] font-serif font-black leading-none text-foreground mb-2">
-          4<span className="text-secondary italic">0</span>4
+          4<span className="text-primary italic">0</span>4
         </h1>
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-extrabold text-foreground mb-4">
@@ -46,7 +46,7 @@ export default function NotFound() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass inline-flex h-12 sm:h-14 items-center justify-center px-6 sm:px-8 rounded-full font-sans font-bold text-sm sm:text-base text-foreground transition-all duration-300 hover:text-secondary hover:-translate-y-0.5"
+            className="liquid-glass inline-flex h-12 sm:h-14 items-center justify-center px-6 sm:px-8 rounded-full font-sans font-bold text-sm sm:text-base text-foreground transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
           >
             <MessageCircle className="w-4 h-4 mr-2" />
             Order on WhatsApp
