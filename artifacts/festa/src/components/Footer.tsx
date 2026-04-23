@@ -27,8 +27,8 @@ export function Footer() {
             <h3 className="text-xs font-sans font-bold tracking-[0.25em] text-secondary uppercase mb-5 md:mb-6">Reach Us</h3>
             <ul className="space-y-3 md:space-y-4 text-sm font-sans font-medium text-foreground/80">
               <li>
-                <a href="mailto:placeholder@mail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
-                  <Mail className="w-4 h-4 shrink-0" /> placeholder@mail.com
+                <a href="mailto:Smriti@festabakes.xyz" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                  <Mail className="w-4 h-4 shrink-0" /> Smriti@festabakes.xyz
                 </a>
               </li>
               <li>
