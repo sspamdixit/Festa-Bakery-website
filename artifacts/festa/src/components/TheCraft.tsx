@@ -27,19 +27,13 @@ export function TheCraft() {
                       className="relative z-10 object-contain object-bottom w-full h-full drop-shadow-2xl hover:scale-[1.03] transition-transform duration-1000"
                     />
                   </div>
-                  <div className="bg-white/90 backdrop-blur px-4 py-3 md:px-5 md:py-4 flex items-center justify-between gap-3 border-t border-foreground/5">
-                    <div>
-                      <p className="font-serif text-lg md:text-2xl font-black leading-tight text-foreground">
-                        Smriti
-                      </p>
-                      <p className="font-sans text-[10px] md:text-xs tracking-[0.18em] uppercase text-foreground/60 font-bold">
-                        Founder &amp; Head Baker
-                      </p>
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary/15 px-2.5 py-1 md:px-3 md:py-1.5 text-[9px] md:text-[10px] font-sans font-bold tracking-[0.2em] uppercase text-secondary whitespace-nowrap">
-                      <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                      Meet
-                    </span>
+                  <div className="bg-white/90 backdrop-blur px-4 py-3 md:px-5 md:py-4 border-t border-foreground/5">
+                    <p className="font-serif text-lg md:text-2xl font-black leading-tight text-foreground">
+                      Smriti Dixit
+                    </p>
+                    <p className="font-sans text-[10px] md:text-xs tracking-[0.18em] uppercase text-foreground/60 font-bold">
+                      Founder &amp; Head Baker
+                    </p>
                   </div>
                 </div>
               </motion.div>
