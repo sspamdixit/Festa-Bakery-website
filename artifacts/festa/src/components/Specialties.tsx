@@ -129,7 +129,7 @@ export function Specialties() {
           ))}
         </div>
 
-        <p className="mt-10 md:mt-14 text-center text-xs sm:text-sm font-sans font-medium text-muted-foreground">
+        <p className="mt-10 md:mt-14 text-center text-base sm:text-lg md:text-xl font-sans font-semibold text-foreground/80 max-w-2xl mx-auto leading-relaxed">
           Customised cakes (themes, toppers, fondant work) are charged extra. Final pricing is confirmed on WhatsApp.
         </p>
       </div>
