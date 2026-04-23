@@ -47,7 +47,7 @@ export function TheCraft() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative flex-[2] min-h-[200px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative flex-[2] min-h-[200px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl [transform:translateZ(0)] isolate">
                   <img
                     src={pinkButterflyCake}
                     alt="Pink buttercream birthday cake with butterfly and gold accents"
@@ -55,10 +55,10 @@ export function TheCraft() {
                     decoding="async"
                     width="600"
                     height="800"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
+                    className="object-cover w-full h-full rounded-xl md:rounded-2xl hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
-                <div className="relative flex-[1] min-h-[120px] overflow-hidden rounded-xl md:rounded-2xl bg-background shadow-xl">
+                <div className="relative flex-[1] min-h-[140px] overflow-hidden rounded-xl md:rounded-2xl shadow-xl [transform:translateZ(0)] isolate bg-gradient-to-br from-[#fce4ec] via-[#fdeef2] to-[#f8d4e0]">
                   <img
                     src={pinkRosetteButterflyCake}
                     alt="Pink rosette cake decorated with butterflies"
@@ -66,7 +66,7 @@ export function TheCraft() {
                     decoding="async"
                     width="600"
                     height="600"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
+                    className="object-contain w-full h-full p-2 rounded-xl md:rounded-2xl hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
               </motion.div>
