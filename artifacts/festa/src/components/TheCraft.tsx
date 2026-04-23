@@ -15,29 +15,31 @@ export function TheCraft() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl bg-gradient-to-br from-[#f9d7e3] via-[#fbe6d1] to-[#f4c1d4]">
-                  <div className="absolute inset-0 glow-pink-radial-soft opacity-70 pointer-events-none" />
-                  <div className="absolute -bottom-2 -right-2 w-40 h-40 md:w-60 md:h-60 rounded-full bg-white/30 blur-3xl pointer-events-none" />
-                  <img
-                    src={smritiPortrait}
-                    alt="Smriti, founder of Festa, holding a hand-decorated celebration cake"
-                    loading="lazy"
-                    decoding="async"
-                    className="relative z-10 object-contain object-bottom w-full h-full drop-shadow-2xl hover:scale-[1.03] transition-transform duration-1000"
-                  />
-                  <div className="absolute top-4 left-4 md:top-5 md:left-5 z-20">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/85 backdrop-blur px-3 py-1 md:px-4 md:py-1.5 text-[10px] md:text-xs font-sans font-bold tracking-[0.2em] uppercase text-foreground shadow-md">
-                      <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                      Meet Smriti
-                    </span>
+                <div className="rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-[#f9d7e3] via-[#fbe6d1] to-[#f4c1d4]">
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <div className="absolute inset-0 glow-pink-radial-soft opacity-70 pointer-events-none" />
+                    <div className="absolute -bottom-2 -right-2 w-40 h-40 md:w-60 md:h-60 rounded-full bg-white/30 blur-3xl pointer-events-none" />
+                    <img
+                      src={smritiPortrait}
+                      alt="Smriti, founder of Festa, holding a hand-decorated celebration cake"
+                      loading="lazy"
+                      decoding="async"
+                      className="relative z-10 object-contain object-bottom w-full h-full drop-shadow-2xl hover:scale-[1.03] transition-transform duration-1000"
+                    />
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4 md:bottom-5 md:left-5 md:right-5 z-20">
-                    <p className="font-serif text-lg md:text-2xl font-black leading-tight text-foreground">
-                      Smriti
-                    </p>
-                    <p className="font-sans text-[11px] md:text-xs tracking-[0.18em] uppercase text-foreground/70 font-bold">
-                      Founder &amp; Head Baker
-                    </p>
+                  <div className="bg-white/90 backdrop-blur px-4 py-3 md:px-5 md:py-4 flex items-center justify-between gap-3 border-t border-foreground/5">
+                    <div>
+                      <p className="font-serif text-lg md:text-2xl font-black leading-tight text-foreground">
+                        Smriti
+                      </p>
+                      <p className="font-sans text-[10px] md:text-xs tracking-[0.18em] uppercase text-foreground/60 font-bold">
+                        Founder &amp; Head Baker
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary/15 px-2.5 py-1 md:px-3 md:py-1.5 text-[9px] md:text-[10px] font-sans font-bold tracking-[0.2em] uppercase text-secondary whitespace-nowrap">
+                      <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                      Meet
+                    </span>
                   </div>
                 </div>
               </motion.div>
