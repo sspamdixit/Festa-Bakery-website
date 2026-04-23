@@ -4,6 +4,7 @@ import { NavBar } from "@/components/NavBar";
 import { Hero } from "@/components/Hero";
 import { TheCraft } from "@/components/TheCraft";
 import { Marquee } from "@/components/Marquee";
+import { FunCake } from "@/components/FunCake";
 import { Specialties } from "@/components/Specialties";
 import { OrderSection } from "@/components/OrderSection";
 import { Footer } from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <TheCraft />
         <Marquee />
+        <FunCake />
         <Specialties />
         <OrderSection />
         <Footer />
