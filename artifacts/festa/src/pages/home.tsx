@@ -1,5 +1,3 @@
-import { useState, useCallback } from "react";
-import { LoadingScreen } from "@/components/LoadingScreen";
 import { NavBar } from "@/components/NavBar";
 import { Hero } from "@/components/Hero";
 import { TheCraft } from "@/components/TheCraft";
@@ -12,16 +10,9 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 
 export default function Home() {
-  const [loaded, setLoaded] = useState(false);
-  const handleDone = useCallback(() => setLoaded(true), []);
-
   return (
     <>
-      <LoadingScreen onDone={handleDone} />
-      <main
-        className="festa-grain relative w-full bg-background min-h-screen"
-        style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
-      >
+      <main className="festa-grain relative w-full bg-background min-h-screen">
         <NavBar />
         <Hero />
         <TheCraft />

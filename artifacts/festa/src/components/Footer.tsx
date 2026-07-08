@@ -82,8 +82,8 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Festa Bakes, Vadodara.
           </p>
           <div className="flex items-center gap-6 text-xs font-sans font-semibold text-foreground/60">
-            <span className="hover:text-foreground cursor-pointer">Privacy</span>
-            <span className="hover:text-foreground cursor-pointer">Terms</span>
+            <a href="/privacy" className="hover:text-secondary transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-secondary transition-colors">Terms</a>
           </div>
         </div>
       </div>
