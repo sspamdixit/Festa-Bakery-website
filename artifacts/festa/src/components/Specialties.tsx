@@ -1,71 +1,73 @@
 import { motion } from "framer-motion";
+import { MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "919963163227";
 
 const menuItems = [
   {
     category: "Standard Cakes",
     items: [
-      { name: "Vanilla", half: "₹1,060", kg: "₹2,120" },
-      { name: "Coffee", half: "₹1,060", kg: "₹2,120" },
-      { name: "Chocolate", half: "₹1,060", kg: "₹2,110" },
-      { name: "White Forest", half: "₹1,070", kg: "₹2,140" },
-      { name: "Black Forest", half: "₹1,090", kg: "₹2,180" },
-      { name: "Choc Walnut / Almond", half: "₹1,140", kg: "₹2,190" },
-      { name: "Chocolate All Over", half: "₹1,095", kg: "₹2,180" },
-      { name: "Chocolate Truffle", half: "₹1,095", kg: "₹2,190" },
-      { name: "Chocolate Ferrero Rocher", half: "₹1,100", kg: "₹2,190" },
-      { name: "Belgian Chocolate Ganache", half: "₹1,095", kg: "₹2,180" },
-      { name: "Lotus Biscoff", half: "₹1,095", kg: "₹2,190" },
-      { name: "Chocolate Chunks", half: "₹1,280", kg: "₹2,560" },
+      "Vanilla",
+      "Coffee",
+      "Chocolate",
+      "White Forest",
+      "Black Forest",
+      "Choc Walnut / Almond",
+      "Chocolate All Over",
+      "Chocolate Truffle",
+      "Chocolate Ferrero Rocher",
+      "Belgian Chocolate Ganache",
+      "Lotus Biscoff",
+      "Chocolate Chunks",
     ],
   },
   {
     category: "Fresh Fruit Cakes",
     items: [
-      { name: "Pineapple", half: "₹1,000", kg: "₹2,000" },
-      { name: "Strawberry", half: "₹1,050", kg: "₹2,100" },
-      { name: "Raspberry", half: "₹1,230", kg: "₹2,460" },
-      { name: "Raspberry Apple", half: "₹1,150", kg: "₹2,300" },
-      { name: "Kiwi-Strawberry", half: "₹1,050", kg: "₹2,100" },
-      { name: "Blueberry", half: "₹1,050", kg: "₹2,100" },
-      { name: "Mango", half: "₹1,100", kg: "₹2,200" },
-      { name: "Pistachio", half: "₹1,140", kg: "₹2,280" },
+      "Pineapple",
+      "Strawberry",
+      "Raspberry",
+      "Raspberry Apple",
+      "Kiwi-Strawberry",
+      "Blueberry",
+      "Mango",
+      "Pistachio",
     ],
   },
   {
     category: "Coffee Cakes",
-    items: [
-      { name: "Mocha", half: "₹1,060", kg: "₹2,120" },
-      { name: "Irish Coffee", half: "₹1,060", kg: "₹2,120" },
-    ],
+    items: ["Mocha", "Irish Coffee"],
   },
   {
     category: "Tea Cakes",
     items: [
-      { name: "Nuts n Caramel", half: "₹850", kg: "₹1,700" },
-      { name: "Walnut", half: "₹870", kg: "₹1,740" },
-      { name: "Choc Walnut Brownie", half: "₹900", kg: "₹1,800" },
-      { name: "Whole Wheat Walnut Brownie", half: "₹1,000", kg: "₹2,000" },
-      { name: "Brownie", half: "₹1,070", kg: "₹2,140" },
-      { name: "Whole Wheat Almond", half: "₹900", kg: "₹1,800" },
-      { name: "Oats & Wheat Mixed Dry Fruits", half: "₹1,040", kg: "₹2,080" },
-      { name: "Whole Wheat Honey n Raisin", half: "₹870", kg: "₹1,740" },
-      { name: "Whole Wheat Honey n Walnut", half: "₹1,000", kg: "₹2,000" },
-      { name: "Jaggery Oats Whole Wheat", half: "₹950", kg: "₹1,900" },
-      { name: "Chocolate Oats Whole Wheat", half: "₹1,000", kg: "₹2,000" },
-      { name: "Oats Jowar", half: "₹950", kg: "₹1,900" },
-      { name: "Oats Jowar Dry Fruits", half: "₹1,090", kg: "₹2,180" },
-      { name: "Chocolate Oats Jowar", half: "₹1,090", kg: "₹2,180" },
-      { name: "Sugar / Gluten / Dairy Free", half: "₹1,090", kg: "₹2,180" },
+      "Nuts n Caramel",
+      "Walnut",
+      "Choc Walnut Brownie",
+      "Whole Wheat Walnut Brownie",
+      "Brownie",
+      "Whole Wheat Almond",
+      "Oats & Wheat Mixed Dry Fruits",
+      "Whole Wheat Honey n Raisin",
+      "Whole Wheat Honey n Walnut",
+      "Jaggery Oats Whole Wheat",
+      "Chocolate Oats Whole Wheat",
+      "Oats Jowar",
+      "Oats Jowar Dry Fruits",
+      "Chocolate Oats Jowar",
+      "Sugar / Gluten / Dairy Free",
     ],
   },
   {
     category: "Add-ons",
-    items: [
-      { name: "Cream Cheese Frosting", half: "₹250", kg: "₹500" },
-      { name: "Extra Nuts", half: "₹60", kg: "₹120" },
-    ],
+    items: ["Cream Cheese Frosting", "Extra Nuts"],
   },
 ];
+
+function getWhatsAppUrl(itemName: string) {
+  const message = `Namaste Festa! I'd like to get a quote for: ${itemName}.\n\nPlease let me know the pricing and availability.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
 
 export function Specialties() {
   return (
@@ -78,7 +80,7 @@ export function Specialties() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Menu & Pricing</p>
+          <p className="text-xs font-sans font-bold tracking-[0.3em] text-secondary uppercase mb-4 md:mb-6">Our Menu</p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black text-foreground">Eggless cakes, baked to order.</h2>
         </motion.div>
 
@@ -96,33 +98,22 @@ export function Specialties() {
                 <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-secondary">{String(idx + 1).padStart(2, "0")}</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 md:gap-y-4">
-                {section.items.map((item) => (
-                  <div
-                    key={item.name}
-                    className="liquid-glass-soft group relative cursor-default rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)]"
+                {section.items.map((name) => (
+                  <a
+                    key={name}
+                    href={getWhatsAppUrl(name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="liquid-glass-soft group relative cursor-pointer rounded-2xl px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.28)] no-underline flex items-center justify-between"
                   >
-                    <div className="grid grid-cols-[1fr_auto_auto] items-end gap-x-6">
-                      <h4 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1 self-center">
-                        {item.name}
-                      </h4>
-                      <div className="shrink-0 w-20 text-right">
-                        <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
-                          ½ Kg
-                        </div>
-                        <span className="text-festa-pink block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110">
-                          {item.half}
-                        </span>
-                      </div>
-                      <div className="shrink-0 w-20 text-right">
-                        <div className="text-[10px] font-sans font-bold tracking-[0.18em] uppercase text-muted-foreground/70 mb-0.5">
-                          1 Kg
-                        </div>
-                        <span className="text-festa-pink block text-sm md:text-base font-sans font-bold transition-transform duration-300 group-hover:scale-110">
-                          {item.kg}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                    <h4 className="text-base md:text-lg font-sans font-bold text-foreground tracking-tight transition-all duration-300 group-hover:text-secondary group-hover:translate-x-1">
+                      {name}
+                    </h4>
+                    <span className="shrink-0 ml-4 flex items-center gap-1.5 text-xs font-sans font-bold tracking-[0.15em] uppercase text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      Get Quote
+                    </span>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -130,7 +121,7 @@ export function Specialties() {
         </div>
 
         <p className="mt-10 md:mt-14 text-center text-base sm:text-lg md:text-xl font-sans font-semibold text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-          Customised cakes (themes, toppers, fondant work) are charged extra. Final pricing is confirmed on WhatsApp.
+          All prices are on request — tap any item to get a quote on WhatsApp.
         </p>
       </div>
     </section>

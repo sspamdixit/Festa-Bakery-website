@@ -32,7 +32,7 @@ export function CheckoutModal() {
         Share the flavour, size, date and message on the cake. We'll confirm on WhatsApp.
       </DialogDescription>
       <p className="mt-3 rounded-xl border border-secondary/25 bg-secondary/10 px-4 py-3 text-sm sm:text-base font-sans font-semibold text-foreground/85 leading-relaxed">
-        Customised cakes (themes, toppers, fondant work) are charged extra. Final pricing is confirmed on WhatsApp.
+        All pricing is on request. We'll confirm your quote on WhatsApp before confirming the order.
       </p>
       <div className="mt-6 grid gap-5">
         <div className="grid gap-2">
