@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 import { Plus, Minus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -103,9 +104,9 @@ export default function Faq() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <a href="/" className="inline-block mb-8 text-sm font-sans font-semibold text-foreground/50 hover:text-secondary transition-colors">
+      <Link href="/" className="inline-block mb-8 text-sm font-sans font-semibold text-foreground/50 hover:text-secondary transition-colors">
         ← Back to Festa
-      </a>
+      </Link>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black mb-2 leading-tight">Frequently Asked Questions</h1>
       <p className="text-sm font-sans text-foreground/60 mb-10">
         Eggless home bakery in Bhayli, Vadodara.{" "}

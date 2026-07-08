@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
 
 export default function Privacy() {
   useEffect(() => {
@@ -7,9 +8,9 @@ export default function Privacy() {
 
   return (
     <main className="min-h-screen bg-background text-foreground px-5 py-16 md:py-24 max-w-2xl mx-auto">
-      <a href="/" className="inline-block mb-8 text-sm font-sans font-semibold text-foreground/50 hover:text-secondary transition-colors">
+      <Link href="/" className="inline-block mb-8 text-sm font-sans font-semibold text-foreground/50 hover:text-secondary transition-colors">
         ← Back to Festa
-      </a>
+      </Link>
 
       <h1 className="text-3xl sm:text-4xl font-serif font-black mb-2 leading-tight">Privacy Policy</h1>
       <p className="text-sm font-sans text-foreground/50 mb-10">Last updated: July 2026</p>
