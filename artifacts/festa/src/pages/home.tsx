@@ -6,8 +6,10 @@ import { TheCraft } from "@/components/TheCraft";
 import { Marquee } from "@/components/Marquee";
 import { FunCake } from "@/components/FunCake";
 import { Specialties } from "@/components/Specialties";
+import { FaqSection } from "@/components/FaqSection";
 import { OrderSection } from "@/components/OrderSection";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFab } from "@/components/WhatsAppFab";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -26,9 +28,11 @@ export default function Home() {
         <Marquee />
         <FunCake />
         <Specialties />
+        <FaqSection />
         <OrderSection />
         <Footer />
       </main>
+      <WhatsAppFab />
     </>
   );
 }
