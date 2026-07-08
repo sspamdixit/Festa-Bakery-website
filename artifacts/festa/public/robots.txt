@@ -53,4 +53,8 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://festabakes.xyz/sitemap.xml
+
+# LLM-readable content
+# Plain-text summary: https://festabakes.xyz/llms.txt
+# Full content:       https://festabakes.xyz/llms-full.txt

@@ -1,30 +1,45 @@
 # Festa
 
-> Festa is an eggless home bakery in Bhayli, Vadodara, Gujarat, India. We bake fresh birthday cakes, fruit cakes, brownies and tea cakes to order. Orders are placed over WhatsApp at +91 99631 63227.
+> Festa is an eggless home bakery in Bhayli, Vadodara, Gujarat, India. We bake birthday cakes, fruit cakes, brownies and tea cakes fresh to order. All pricing is on request — message us on WhatsApp at +91 99631 63227 for a quote.
 
 ## Key facts
 
 - Business: Festa (home bakery)
+- Founder: Smriti Dixit
 - Location: Bhayli, Vadodara, Gujarat 391410, India
 - Specialty: 100% eggless cakes, brownies, tea cakes
 - Order channel: WhatsApp +91 99631 63227
-- Lead time: 48 hours minimum; 3–5 days for custom / theme cakes
+- Email: Smriti@festabakes.xyz
+- Instagram: @festa.bakes
+- Lead time: 48 hours minimum for celebration cakes; 24 hours for brownies and tea cakes; 3–5 days for custom/theme cakes
 - Delivery: Pickup from Bhayli preferred; third-party delivery within Vadodara at customer cost
-- Pricing: Standard cakes from ₹650 / 500g; quote on WhatsApp
-- Diets: Eggless always; sugar-free on request; vegan for select flavours with notice
+- Pricing: All on request via WhatsApp — depends on flavour, weight and design
+- Diets: 100% eggless always; sugar-free on request; vegan for select flavours with prior notice
 
-## Flavours
+## Menu
 
-Chocolate truffle, fresh fruit, red velvet, pineapple, butterscotch, coffee, vanilla, seasonal fruit cakes, brownies, tea cakes.
+### Standard Cakes
+Vanilla, Coffee, Chocolate, Butterscotch, White Forest, Black Forest, Choc Walnut / Almond, Chocolate All Over, Chocolate Truffle, Truffle, Dutch, Hazelnut, Chocolate Ferrero Rocher, Belgian Chocolate Ganache, Lotus Biscoff, Chocolate Chunks, KitKat, Oreo, Rasmalai, Thandai, Paan
+
+### Fruit Cakes
+Pineapple, Strawberry, Black Currant, Raspberry, Raspberry Apple, Kiwi-Strawberry, Blueberry, Mango, Pistachio
+
+### Tea Cakes
+Walnut, Choc Walnut Brownie, Whole Wheat Walnut Brownie, Brownie, Fudgy Brownie, Oreo Brownie, Biscoff Brownie, KitKat Brownie, Nutella Brownie, Brownie Tower, Whole Wheat Almond, Oats & Wheat Mixed Dry Fruits, Whole Wheat Honey n Raisin, Whole Wheat Honey n Walnut, Jaggery Oats Whole Wheat, Chocolate Oats Whole Wheat, Oats Jowar, Oats Jowar Dry Fruits, Chocolate Oats Jowar, Sugar / Gluten Free
+
+### Add-ons
+Extra Nuts
 
 ## Pages
 
-- [Home](/): Brand story, specialties, how to order
-- [FAQ](/faq): Full list of frequently asked questions in plain text
-- [Sitemap](/sitemap.xml): Machine-readable list of pages
-- [Full content (markdown)](/llms-full.txt): All key text content for LLM ingestion
+- [Home](https://festabakes.xyz/): Brand story, full menu, FAQ, how to order
+- [FAQ](https://festabakes.xyz/faq): Frequently asked questions in plain text
+- [Full content (markdown)](https://festabakes.xyz/llms-full.txt): Complete text content for LLM ingestion
+- [Sitemap](https://festabakes.xyz/sitemap.xml): Machine-readable page list
 
 ## Contact
 
-WhatsApp: +91 99631 63227
-City: Vadodara, Gujarat, India
+- WhatsApp: +91 99631 63227
+- Email: Smriti@festabakes.xyz
+- Instagram: @festa.bakes
+- City: Vadodara, Gujarat, India
